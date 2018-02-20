@@ -1,0 +1,526 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.6.日志 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.7.Common Gotchas--常见陷阱.html" />
+    
+    
+    <link rel="prev" href="3.5.Testing Your Code--测试你的代码.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0.介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.起步/">
+            
+                <a href="../1.起步/">
+            
+                    
+                    1.起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.开发环境/">
+            
+                <a href="../2.开发环境/">
+            
+                    
+                    2.开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.写出优雅的Python代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                <a href="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                    
+                    3.1.结构化您的工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.2.Code Style--代码风格.html">
+            
+                <a href="3.2.Code Style--代码风格.html">
+            
+                    
+                    3.2.代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3.Reading Great Code--阅读好的代码.html">
+            
+                <a href="3.3.Reading Great Code--阅读好的代码.html">
+            
+                    
+                    3.3.阅读好的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3.4.Documentation--文档.html">
+            
+                <a href="3.4.Documentation--文档.html">
+            
+                    
+                    3.4.文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3.5.Testing Your Code--测试你的代码.html">
+            
+                <a href="3.5.Testing Your Code--测试你的代码.html">
+            
+                    
+                    3.5.测试你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="3.6.Logging--日志.html">
+            
+                <a href="3.6.Logging--日志.html">
+            
+                    
+                    3.6.日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="3.7.Common Gotchas--常见陷阱.html">
+            
+                <a href="3.7.Common Gotchas--常见陷阱.html">
+            
+                    
+                    3.7.常见陷阱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="3.8.Choosing a License--选择一个许可.html">
+            
+                <a href="3.8.Choosing a License--选择一个许可.html">
+            
+                    
+                    3.8.选择一个许可
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.6.日志</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><em>The <a href="http://docs.python.org/library/logging.html#module-logging" target="_blank">logging</a> module has been a part of Python&#x2019;s Standard Library since version 2.3. It is succinctly described in <a href="https://www.python.org/dev/peps/pep-0282" target="_blank">PEP 282</a>. The documentation is notoriously hard to read, except for the <a href="http://docs.python.org/howto/logging.html#logging-basic-tutorial" target="_blank">basic logging tutorial</a>.</em></p>
+<p><a href="http://docs.python.org/library/logging.html#module-logging" target="_blank">logging</a> &#x6A21;&#x5757;&#x81EA;2.3&#x7248;&#x672C;&#x5F00;&#x59CB;&#x4FBF;&#x662F;Python&#x6807;&#x51C6;&#x5E93;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5B83;&#x88AB;&#x7B80;&#x6D01;&#x7684;&#x63CF;&#x8FF0;&#x5728; <a href="https://www.python.org/dev/peps/pep-0282" target="_blank">PEP 282</a>&#x3002; &#x4F17;&#x6240;&#x5468;&#x77E5;&#xFF0C;&#x9664;&#x4E86; <a href="http://docs.python.org/howto/logging.html#logging-basic-tutorial" target="_blank">&#x57FA;&#x7840;&#x65E5;&#x5FD7;&#x6307;&#x5357;</a> &#x90E8;&#x5206;&#xFF0C;&#x8BE5;&#x6587;&#x6863;&#x5E76;&#x4E0D;&#x5BB9;&#x6613;&#x9605;&#x8BFB;&#x3002;</p>
+<p><em>Logging serves two purposes:</em></p>
+<p>&#x65E5;&#x5FD7;&#x7684;&#x4E24;&#x4E2A;&#x76EE;&#x7684;&#xFF1A;</p>
+<ul>
+<li><p><strong>*Diagnostic logging</strong> records events related to the application&#x2019;s operation. If a user calls in to report an error, for example, the logs can be searched for context.<em>
+<em>*&#x8BCA;&#x65AD;&#x65E5;&#x5FD7;</em></em> &#x8BB0;&#x5F55;&#x4E0E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x64CD;&#x4F5C;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7528;&#x6237;&#x9047;&#x5230;&#x7684;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#xFF0C; &#x53EF;&#x901A;&#x8FC7;&#x641C;&#x7D22;&#x8BCA;&#x65AD;&#x65E5;&#x5FD7;&#x83B7;&#x5F97;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+<li><p><strong>*Audit logging</strong> records events for business analysis. A user&#x2019;s transactions can be extracted and combined with other user details for reports or to optimize a business goal.<em>
+<em>*&#x5BA1;&#x8BA1;&#x65E5;&#x5FD7;</em></em> &#x4E3A;&#x5546;&#x4E1A;&#x5206;&#x6790;&#x800C;&#x8BB0;&#x5F55;&#x7684;&#x65E5;&#x5FD7;&#x3002;&#x4ECE;&#x5BA1;&#x8BA1;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x53EF;&#x63D0;&#x53D6;&#x7528;&#x6237;&#x7684;&#x4EA4;&#x6613;&#x4FE1;&#x606F;&#xFF0C; &#x5E76;&#x7ED3;&#x5408;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x8D44;&#x6599;&#x6784;&#x6210;&#x7528;&#x6237;&#x62A5;&#x544A;&#x6216;&#x8005;&#x7528;&#x6765;&#x4F18;&#x5316;&#x5546;&#x4E1A;&#x76EE;&#x6807;&#x3002;</p>
+</li>
+</ul>
+<h1 id="or-print&#x6216;&#x8005;&#x6253;&#x5370;">... or Print?(..&#x6216;&#x8005;&#x6253;&#x5370;)</h1>
+<p><em>The only time that <code>print</code> is a better option than logging is when the goal is to display a help statement for a command line application. Other reasons why logging is better than <code>print</code>:</em></p>
+<p>&#x5F53;&#x9700;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x5E94;&#x7528;&#x4E2D;&#x663E;&#x793A;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x65F6;&#xFF0C;&#x6253;&#x5370;&#x662F;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x4E8E;&#x65E5;&#x5FD7;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002; &#x800C;&#x5728;&#x5176;&#x4ED6;&#x65F6;&#x5019;&#xFF0C;&#x65E5;&#x5FD7;&#x603B;&#x80FD;&#x4F18;&#x4E8E; &#x6253;&#x5370; &#xFF0C;&#x7406;&#x7531;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p><em>The <a href="https://docs.python.org/library/logging.html#logrecord-attributes" target="_blank">log record</a>, which is created with every logging event, contains readily available diagnostic information such as the file name, full path, function, and line number of the logging event.</em>
+&#x65E5;&#x5FD7;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x7684; <a href="https://docs.python.org/library/logging.html#logrecord-attributes" target="_blank">&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;</a>&#xFF0C;&#x5305;&#x542B;&#x6E05;&#x6670;&#x53EF;&#x7528;&#x7684;&#x8BCA;&#x65AD;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x3001;&#x8DEF;&#x5F84;&#x3001;&#x51FD;&#x6570;&#x540D;&#x548C;&#x884C;&#x53F7;&#x7B49;&#x3002;</p>
+</li>
+<li><p>Events logged in included modules are automatically accessible via the root logger to your application&#x2019;s logging stream, unless you filter them out.
+&#x5305;&#x542B;&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x53EF;&#x901A;&#x8FC7;&#x6839;&#x8BB0;&#x5F55;&#x5668;&#x5BF9;&#x5E94;&#x7528;&#x7684;&#x65E5;&#x5FD7;&#x6D41;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x9664;&#x975E;&#x60A8;&#x5C06;&#x65E5;&#x5FD7;&#x8FC7;&#x6EE4;&#x4E86;&#x3002;</p>
+</li>
+<li><p><em>Logging can be selectively silenced by using the method <a href="http://docs.python.org/library/logging.html#logging.Logger.setLevel" target="_blank">logging.Logger.setLevel()</a> or disabled by setting the attribute <code>logging.Logger.disabled</code> to <code>True</code>.</em>
+&#x53EF;&#x901A;&#x8FC7; <a href="http://docs.python.org/library/logging.html#logging.Logger.setLevel" target="_blank">logging.Logger.setLevel()</a> &#x65B9;&#x6CD5;&#x6709;&#x9009;&#x62E9;&#x5730;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#xFF0C; &#x6216;&#x53EF;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E; <code>logging.Logger.disabled</code> &#x5C5E;&#x6027;&#x4E3A; <code>True</code> &#x6765;&#x7981;&#x7528;&#x3002;</p>
+</li>
+</ul>
+<h1 id="logging-in-a-library&#x5E93;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;">Logging in a Library(&#x5E93;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;)</h1>
+<p><em>Notes for <a href="https://docs.python.org/howto/logging.html#configuring-logging-for-a-library" target="_blank">configuring logging for a library</a> are in the <a href="http://docs.python.org/howto/logging.html" target="_blank">logging tutorial</a>. Because the user, not the library, should dictate what happens when a logging event occurs, one admonition bears repeating:</em></p>
+<p><a href="http://docs.python.org/howto/logging.html" target="_blank">&#x65E5;&#x5FD7;&#x6307;&#x5357;</a> &#x4E2D;&#x542B; <a href="https://docs.python.org/howto/logging.html#configuring-logging-for-a-library" target="_blank">&#x5E93;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</a> &#x7684;&#x8BF4;&#x660E;&#x3002;&#x7531;&#x4E8E;&#x662F; &#x7528;&#x6237; &#xFF0C;&#x800C;&#x975E;&#x5E93;&#x6765;&#x6307;&#x660E;&#x5982;&#x4F55;&#x54CD;&#x5E94;&#x65E5;&#x5FD7;&#x4E8B;&#x4EF6;&#xFF0C; &#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x53CD;&#x590D;&#x8BF4;&#x660E;&#x7684;&#x5FE0;&#x544A;&#xFF1A;</p>
+<blockquote>
+<p>Note: It is strongly advised that you do not add any handlers other than NullHandler to your library&#x2019;s loggers.
+&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x5411;&#x60A8;&#x7684;&#x5E93;&#x65E5;&#x5FD7;&#x4E2D;&#x52A0;&#x5165;&#x9664;NullHandler&#x5916;&#x7684;&#x5176;&#x5B83;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+</blockquote>
+<p><em>Best practice when instantiating loggers in a library is to only create them using the <code>__name__</code> global variable: the <a href="http://docs.python.org/library/logging.html#module-logging" target="_blank">logging</a> module creates a hierarchy of loggers using dot notation, so using <code>__name__</code> ensures no name collisions.</em></p>
+<p>&#x5728;&#x5E93;&#x4E2D;&#xFF0C;&#x58F0;&#x660E;&#x65E5;&#x5FD7;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#x662F;&#x901A;&#x8FC7; <code>__name__</code> &#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF1A; <a href="http://docs.python.org/library/logging.html#module-logging" target="_blank">logging</a> &#x6A21;&#x5757;&#x901A;&#x8FC7;&#x70B9;(dot)&#x8FD0;&#x7B97;&#x7B26;&#x521B;&#x5EFA;&#x5C42;&#x7EA7;&#x6392;&#x5217;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x7528; <code>__name__</code> &#x53EF;&#x4EE5;&#x907F;&#x514D;&#x540D;&#x5B57;&#x51B2;&#x7A81;&#x3002;</p>
+<p><em>Here is an example of best practice from the <a href="https://github.com/kennethreitz/requests" target="_blank">requests source</a> &#x2013; place this in your <code>__init__.py</code></em></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x6765;&#x81EA; <a href="https://github.com/kennethreitz/requests" target="_blank">requests &#x8D44;&#x6E90;</a> &#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x7684;&#x4F8B;&#x5B50; &#x2014;&#x2014; &#x628A;&#x5B83;&#x653E;&#x7F6E;&#x5728;&#x60A8;&#x7684; <code>__init__.py</code> &#x6587;&#x4EF6;&#x4E2D;</p>
+<pre><code>import logging
+logging.getLogger(__name__).addHandler(logging.NullHandler())
+</code></pre><h1 id="logging-in-an-application&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;">Logging in an Application(&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;)</h1>
+<p><em>The <a href="http://12factor.net" target="_blank">twelve factor app</a>, an authoritative reference for good practice in application development, contains a section on <a href="http://12factor.net/logs" target="_blank">logging best practice</a>. It emphatically advocates for treating log events as an event stream, and for sending that event stream to standard output to be handled by the application environment.</em></p>
+<p>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x7684;&#x6743;&#x5A01;&#x6307;&#x5357;&#xFF0C;<a href="http://12factor.net" target="_blank">&#x5E94;&#x7528;&#x7684;12&#x8981;&#x7D20;</a>&#xFF0C;&#x4E5F;&#x5728;&#x5176;&#x4E2D;&#x4E00;&#x8282;&#x63CF;&#x8FF0;&#x4E86; <a href="http://12factor.net/logs" target="_blank">&#x65E5;&#x5FD7;&#x7684;&#x4F5C;&#x7528;</a>&#x3002;&#x5B83;&#x7279;&#x522B;&#x5F3A;&#x8C03;&#x5C06;&#x65E5;&#x5FD7;&#x89C6;&#x4E3A;&#x4E8B;&#x4EF6;&#x6D41;&#xFF0C; &#x5E76;&#x5C06;&#x5176;&#x53D1;&#x9001;&#x81F3;&#x7531;&#x5E94;&#x7528;&#x73AF;&#x5883;&#x6240;&#x5904;&#x7406;&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E2D;&#x3002;</p>
+<p><em>There are at least three ways to configure a logger:</em></p>
+<p>&#x914D;&#x7F6E;&#x65E5;&#x5FD7;&#x81F3;&#x5C11;&#x6709;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li><p><strong>Using an INI-formatted file(&#x4F7F;&#x7528;INI&#x683C;&#x5F0F;&#x6587;&#x4EF6;)</strong>:</p>
+<ul>
+<li><strong>*Pro</strong>: possible to update configuration while running using the function <a href="http://docs.python.org/library/logging.config.html#logging.config.listen" target="_blank">logging.config.listen()</a> to listen on a socket.<em>
+<em>*&#x4F18;&#x70B9;</em></em>: &#x4F7F;&#x7528; <a href="http://docs.python.org/library/logging.config.html#logging.config.listen" target="_blank">logging.config.listen()</a>&#x51FD;&#x6570;&#x76D1;&#x542C;socket&#xFF0C;&#x53EF;&#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x66F4;&#x65B0;&#x914D;&#x7F6E;</li>
+<li><strong>*Con</strong>: less control (e.g. custom subclassed filters or loggers) than possible when configuring a logger in code.<em>
+<em>*&#x7F3A;&#x70B9;</em></em>: &#x901A;&#x8FC7;&#x6E90;&#x7801;&#x63A7;&#x5236;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x8F83;&#x5C11;&#xFF08;&#x4F8B;&#x5982;:&#x5B50;&#x7C7B;&#x5316;&#x5B9A;&#x5236;&#x7684;&#x8FC7;&#x6EE4;&#x5668;&#x6216;&#x8BB0;&#x5F55;&#x5668;&#xFF09;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>Using a dictionary or a JSON-formatted file(&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x6216;JSON&#x683C;&#x5F0F;&#x6587;&#x4EF6;):</strong></p>
+<ul>
+<li><strong>*Pro</strong>: in addition to updating while running, it is possible to load from a file using the <a href="http://docs.python.org/library/json.html#module-json" target="_blank">json</a> module, in the standard library since Python 2.6.<em> 
+<em>*&#x4F18;&#x70B9;</em></em>: &#x9664;&#x4E86;&#x53EF;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x66F4;&#x65B0;&#xFF0C;&#x5728;Python 2.6&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x53EF;&#x901A;&#x8FC7; <a href="http://docs.python.org/library/json.html#module-json" target="_blank">json</a> &#x6A21;&#x5757;&#x4ECE;&#x5176;&#x5B83;&#x6587;&#x4EF6;&#x4E2D;&#x5BFC;&#x5165;&#x914D;&#x7F6E;&#x3002;</li>
+<li><strong>*Con</strong>: less control than when configuring a logger in code.<em>
+<em>*&#x7F3A;&#x70B9;</em></em>: &#x5F88;&#x96BE;&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x63A7;&#x5236;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>Using code(&#x4F7F;&#x7528;&#x6E90;&#x7801;)</strong>:</p>
+<ul>
+<li><strong>*Pro</strong>: complete control over the configuration.<em>
+<em>*&#x4F18;&#x70B9;</em></em>: &#x5BF9;&#x914D;&#x7F6E;&#x7EDD;&#x5BF9;&#x7684;&#x63A7;&#x5236;&#x3002;</li>
+<li><strong>*Con</strong>: modifications require a change to source code.<em>
+<em>*&#x7F3A;&#x70B9;</em></em>: &#x5BF9;&#x914D;&#x7F6E;&#x7684;&#x66F4;&#x6539;&#x9700;&#x8981;&#x5BF9;&#x6E90;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 id="example-configuration-via-an-ini-file&#x901A;&#x8FC7;ini&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;">Example Configuration via an INI File(&#x901A;&#x8FC7;INI&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;)</h2>
+<p><em>Let us say the file is named <code>logging_config.ini</code>. More details for the file format are in the <a href="https://docs.python.org/howto/logging.html#configuring-logging" target="_blank">logging configuration</a> section of the <a href="http://docs.python.org/howto/logging.html" target="_blank">logging tutorial</a>.</em></p>
+<p>&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x6587;&#x4EF6;&#x540D;&#x4E3A; <code>logging_config.ini</code> &#x3002;&#x5173;&#x4E8E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1; <a href="http://docs.python.org/howto/logging.html" target="_blank">&#x65E5;&#x5FD7;&#x6307;&#x5357;</a> &#x4E2D;&#x7684; <a href="https://docs.python.org/howto/logging.html#configuring-logging" target="_blank">&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</a> &#x90E8;&#x5206;&#x3002;</p>
+<pre><code class="lang-ini"><span class="hljs-section">[loggers]</span>
+<span class="hljs-attr">keys</span>=root
+<span class="hljs-section">
+[handlers]</span>
+<span class="hljs-attr">keys</span>=stream_handler
+<span class="hljs-section">
+[formatters]</span>
+<span class="hljs-attr">keys</span>=formatter
+<span class="hljs-section">
+[logger_root]</span>
+<span class="hljs-attr">level</span>=DEBUG
+<span class="hljs-attr">handlers</span>=stream_handler
+<span class="hljs-section">
+[handler_stream_handler]</span>
+<span class="hljs-attr">class</span>=StreamHandler
+<span class="hljs-attr">level</span>=DEBUG
+<span class="hljs-attr">formatter</span>=formatter
+<span class="hljs-attr">args</span>=(sys.stderr,)
+<span class="hljs-section">
+[formatter_formatter]</span>
+<span class="hljs-attr">format</span>=%(asctime)s %(name)-<span class="hljs-number">12</span>s %(levelname)-<span class="hljs-number">8</span>s %(message)s
+</code></pre>
+<p><em>Then use <code>logging.config.fileConfig()</code> in the code:</em></p>
+<p>&#x7136;&#x540E;&#x5728;&#x6E90;&#x7801;&#x4E2D;&#x8C03;&#x7528; <code>logging.config.fileConfig()</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">from</span> logging.config <span class="hljs-keyword">import</span> fileConfig
+
+fileConfig(<span class="hljs-string">&apos;logging_config.ini&apos;</span>)
+logger = logging.getLogger()
+logger.debug(<span class="hljs-string">&apos;often makes a very good meal of %s&apos;</span>, <span class="hljs-string">&apos;visiting tourists&apos;</span>)
+</code></pre>
+<h2 id="example-configuration-via-a-dictionary&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;">Example Configuration via a Dictionary(&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;)</h2>
+<p><em>As of Python 2.7, you can use a dictionary with configuration details. <a href="https://www.python.org/dev/peps/pep-0391" target="_blank">PEP 391</a> contains a list of the mandatory and optional elements in the configuration dictionary.</em></p>
+<p>Python 2.7&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5B9E;&#x73B0;&#x8BE6;&#x7EC6;&#x914D;&#x7F6E;&#x3002;<a href="https://www.python.org/dev/peps/pep-0391" target="_blank">PEP 391</a>&#x5305;&#x542B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x5B57;&#x5178;&#x914D;&#x7F6E;&#x7684;&#x5F3A;&#x5236;&#x548C; &#x975E;&#x5F3A;&#x5236;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">from</span> logging.config <span class="hljs-keyword">import</span> dictConfig
+
+logging_config = dict(
+    version = <span class="hljs-number">1</span>,
+    formatters = {
+        <span class="hljs-string">&apos;f&apos;</span>: {<span class="hljs-string">&apos;format&apos;</span>:
+            <span class="hljs-string">&apos;%(asctime)s %(name)-12s %(levelname)-8s %(message)s&apos;</span>}
+        },
+    handlers = {
+        <span class="hljs-string">&apos;h&apos;</span>: {<span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;logging.StreamHandler&apos;</span>,
+            <span class="hljs-string">&apos;formatter&apos;</span>: <span class="hljs-string">&apos;f&apos;</span>,
+            <span class="hljs-string">&apos;level&apos;</span>: logging.DEBUG}
+        },
+    root = {
+        <span class="hljs-string">&apos;handlers&apos;</span>: [<span class="hljs-string">&apos;h&apos;</span>],
+        <span class="hljs-string">&apos;level&apos;</span>: logging.DEBUG,
+    },
+)
+
+dictConfig(logging_config)
+
+logger = logging.getLogger()
+logger.debug(<span class="hljs-string">&apos;often makes a very good meal of %s&apos;</span>, <span class="hljs-string">&apos;visiting tourists&apos;</span>)
+</code></pre>
+<h2 id="example-configuration-directly-in-code&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x76F4;&#x63A5;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;">Example Configuration Directly in Code(&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x76F4;&#x63A5;&#x914D;&#x7F6E;&#x7684;&#x4F8B;&#x5B50;)</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+logger = logging.getLogger()
+handler = logging.StreamHandler()
+formatter = logging.Formatter(
+    <span class="hljs-string">&apos;%(asctime)s %(name)-12s %(levelname)-8s %(message)s&apos;</span>)
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
+logger.debug(<span class="hljs-string">&apos;often makes a very good meal of %s&apos;</span>, <span class="hljs-string">&apos;visiting tourists&apos;</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.5.Testing Your Code--测试你的代码.html" class="navigation navigation-prev " aria-label="Previous page: 3.5.测试你的代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.7.Common Gotchas--常见陷阱.html" class="navigation navigation-next " aria-label="Next page: 3.7.常见陷阱">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.6.日志","level":"1.4.6","depth":2,"next":{"title":"3.7.常见陷阱","level":"1.4.7","depth":2,"path":"3.写出优雅的Python代码/3.7.Common Gotchas--常见陷阱.md","ref":"3.写出优雅的Python代码/3.7.Common Gotchas--常见陷阱.md","articles":[]},"previous":{"title":"3.5.测试你的代码","level":"1.4.5","depth":2,"path":"3.写出优雅的Python代码/3.5.Testing Your Code--测试你的代码.md","ref":"3.写出优雅的Python代码/3.5.Testing Your Code--测试你的代码.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3.写出优雅的Python代码/3.6.Logging--日志.md","mtime":"2018-02-20T10:57:40.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T13:31:28.762Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

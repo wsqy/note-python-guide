@@ -1,0 +1,534 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.7.常见陷阱 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.8.Choosing a License--选择一个许可.html" />
+    
+    
+    <link rel="prev" href="3.6.Logging--日志.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0.介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.起步/">
+            
+                <a href="../1.起步/">
+            
+                    
+                    1.起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.开发环境/">
+            
+                <a href="../2.开发环境/">
+            
+                    
+                    2.开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.写出优雅的Python代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                <a href="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                    
+                    3.1.结构化您的工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.2.Code Style--代码风格.html">
+            
+                <a href="3.2.Code Style--代码风格.html">
+            
+                    
+                    3.2.代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3.Reading Great Code--阅读好的代码.html">
+            
+                <a href="3.3.Reading Great Code--阅读好的代码.html">
+            
+                    
+                    3.3.阅读好的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3.4.Documentation--文档.html">
+            
+                <a href="3.4.Documentation--文档.html">
+            
+                    
+                    3.4.文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3.5.Testing Your Code--测试你的代码.html">
+            
+                <a href="3.5.Testing Your Code--测试你的代码.html">
+            
+                    
+                    3.5.测试你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="3.6.Logging--日志.html">
+            
+                <a href="3.6.Logging--日志.html">
+            
+                    
+                    3.6.日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="3.7.Common Gotchas--常见陷阱.html">
+            
+                <a href="3.7.Common Gotchas--常见陷阱.html">
+            
+                    
+                    3.7.常见陷阱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="3.8.Choosing a License--选择一个许可.html">
+            
+                <a href="3.8.Choosing a License--选择一个许可.html">
+            
+                    
+                    3.8.选择一个许可
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.7.常见陷阱</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><em>For the most part, Python aims to be a clean and consistent language that avoids surprises. However, there are a few cases that can be confusing to newcomers.</em></p>
+<p>&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Python&#x7684;&#x76EE;&#x6807;&#x662F;&#x6210;&#x4E3A;&#x4E00;&#x95E8;&#x7B80;&#x6D01;&#x548C;&#x4E00;&#x81F4;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x540C;&#x65F6;&#x907F;&#x514D;&#x610F;&#x5916;&#x60C5;&#x51B5;&#x3002; &#x7136;&#x800C;&#xFF0C;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x65B0;&#x4EBA;&#x56F0;&#x60D1;&#x3002;</p>
+<p><em>Some of these cases are intentional but can be potentially surprising. Some could arguably be considered language warts. In general, what follows is a collection of potentially tricky behavior that might seem strange at first glance, but is generally sensible once you&#x2019;re aware of the underlying cause for the surprise.</em></p>
+<p>&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x60C5;&#x51B5;&#x662F;&#x6709;&#x610F;&#x4E3A;&#x4E4B;&#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x6709;&#x6F5C;&#x5728;&#x7684;&#x98CE;&#x9669;&#x3002;&#x800C;&#x53E6;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x8BED;&#x8A00;&#x7684;&#x7F3A;&#x9677;&#x3002; &#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x4E4D;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x53D6;&#x5DE7;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x4E0D;&#x8FC7;&#x53EA;&#x8981;&#x60A8;&#x6CE8;&#x610F;&#x4E86;&#x5F3A;&#x8C03;&#x7684;&#x4E8B;&#x9879;&#xFF0C; &#x8FD9;&#x4E9B;&#x884C;&#x4E3A;&#x901A;&#x5E38;&#x662F;&#x53EF;&#x53D6;&#x7684;&#x3002;</p>
+<h1 id="mutable-default-arguments&#x53EF;&#x53D8;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">Mutable Default Arguments(&#x53EF;&#x53D8;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;)</h1>
+<p><em>Seemingly the most common surprise new Python programmers encounter is Python&#x2019;s treatment of mutable default arguments in function definitions.</em></p>
+<p>&#x770B;&#x8D77;&#x6765;&#xFF0C;&#x6700; &#x8BA9;Python&#x7A0B;&#x5E8F;&#x5458;&#x611F;&#x5230;&#x60CA;&#x5947;&#x7684;&#x662F;Python&#x5BF9;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E2D;&#x53EF;&#x53D8;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="what-you-wrote&#x60A8;&#x6240;&#x5199;&#x7684;">What You Wrote(&#x60A8;&#x6240;&#x5199;&#x7684;)</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">append_to</span><span class="hljs-params">(element, to=[])</span>:</span>
+    to.append(element)
+    <span class="hljs-keyword">return</span> to
+</code></pre>
+<h2 id="what-you-might-have-expected-to-happen&#x60A8;&#x6240;&#x671F;&#x671B;&#x7684;">What You Might Have Expected to Happen(&#x60A8;&#x6240;&#x671F;&#x671B;&#x7684;)</h2>
+<pre><code class="lang-python">my_list = append_to(<span class="hljs-number">12</span>)
+<span class="hljs-keyword">print</span> my_list
+
+my_other_list = append_to(<span class="hljs-number">42</span>)
+<span class="hljs-keyword">print</span> my_other_list
+</code></pre>
+<p><em>A new list is created each time the function is called if a second argument isn&#x2019;t provided, so that the output is:</em></p>
+<p>&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x63D0;&#x4F9B;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x5E94;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">[<span class="hljs-number">12</span>]
+[<span class="hljs-number">42</span>]
+</code></pre>
+<h2 id="what-does-happen&#x800C;&#x4E8B;&#x5B9E;&#x662F;">What Does Happen(&#x800C;&#x4E8B;&#x5B9E;&#x662F;)</h2>
+<pre><code class="lang-python">[<span class="hljs-number">12</span>]
+[<span class="hljs-number">12</span>, <span class="hljs-number">42</span>]
+</code></pre>
+<p><em>A new list is created once when the function is defined, and the same list is used in each successive call.</em></p>
+<p>&#x5F53;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5217;&#x8868;&#x5C31;&#x88AB;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x800C;&#x4E14;&#x540C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5728;&#x6BCF;&#x6B21;&#x6210;&#x529F;&#x7684;&#x8C03;&#x7528;&#x4E2D;&#x90FD;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<p><em>Python&#x2019;s default arguments are evaluated once when the function is defined, not each time the function is called (like it is in say, Ruby). This means that if you use a mutable default argument and mutate it, you will and have mutated that object for all future calls to the function as well.</em></p>
+<p>&#x5F53;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;Python&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5C31;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#x3002; &#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5E76;&#x6539;&#x53D8;&#x4E86;&#x5B83;&#xFF0C;&#x60A8;&#x5C06;&#x4F1A; &#x5728;&#x672A;&#x6765;&#x6240;&#x6709;&#x5BF9;&#x6B64;&#x51FD;&#x6570;&#x7684; &#x8C03;&#x7528;&#x4E2D;&#x6539;&#x53D8;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<h2 id="what-you-should-do-instead&#x60A8;&#x5E94;&#x8BE5;&#x505A;&#x7684;">What You Should Do Instead(&#x60A8;&#x5E94;&#x8BE5;&#x505A;&#x7684;)</h2>
+<p><em>Create a new object each time the function is called, by using a default arg to signal that no argument was provided (<a href="http://docs.python.org/library/constants.html#None" target="_blank">None</a> is often a good choice).</em></p>
+<p>&#x5728;&#x6BCF;&#x6B21;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6307;&#x793A;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF08;<a href="http://docs.python.org/library/constants.html#None" target="_blank">None</a>&#x901A;&#x5E38;&#x662F;&#x4E2A;&#x597D;&#x9009;&#x62E9;&#xFF09;&#xFF0C;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">append_to</span><span class="hljs-params">(element, to=None)</span>:</span>
+    <span class="hljs-keyword">if</span> to <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        to = []
+    to.append(element)
+    <span class="hljs-keyword">return</span> to
+</code></pre>
+<p><em>Do not forget, you are passing a list object as the second argument.</em></p>
+<p>&#x522B;&#x5FD8;&#x4E86;&#xFF0C;&#x60A8;&#x5728;&#x628A; &#x5217;&#x8868; &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;</p>
+<h2 id="when-the-gotcha-isnt-a-gotcha&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x9677;&#x9631;&#x4E0D;&#x662F;&#x9677;&#x9631;">When the Gotcha Isn&#x2019;t a Gotcha(&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x9677;&#x9631;&#x4E0D;&#x662F;&#x9677;&#x9631;)</h2>
+<p><em>Sometimes you can specifically &#x201C;exploit&#x201D; (read: use as intended) this behavior to maintain state between calls of a function. This is often done when writing a caching function.</em></p>
+<p>&#x6709;&#x65F6;&#x60A8;&#x53EF;&#x4EE5;&#x4E13;&#x95E8;&#x201C;&#x5229;&#x7528;&#x201D;&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x7279;&#x5730;&#x4F7F;&#x7528;&#xFF09;&#x8FD9;&#x79CD;&#x884C;&#x4E3A;&#x6765;&#x7EF4;&#x62A4;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x7528;&#x4E8E; &#x7F16;&#x5199;&#x7F13;&#x5B58;&#x51FD;&#x6570;&#x3002;</p>
+<h1 id="late-binding-closures&#xFF08;&#x8FDF;&#x7ED1;&#x5B9A;&#x95ED;&#x5305;&#xFF09;">Late Binding Closures&#xFF08;&#x8FDF;&#x7ED1;&#x5B9A;&#x95ED;&#x5305;&#xFF09;</h1>
+<p><em>Another common source of confusion is the way Python binds its variables in closures (or in the surrounding global scope).</em></p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x56F0;&#x60D1;&#x662F;Python&#x5728;&#x95ED;&#x5305;(&#x6216;&#x5728;&#x5468;&#x56F4;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF08;surrounding global scope&#xFF09;)&#x4E2D; &#x7ED1;&#x5B9A;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="what-you-wrote&#x4F60;&#x6240;&#x5199;&#x7684;">What You Wrote(&#x4F60;&#x6240;&#x5199;&#x7684;)</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_multipliers</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> [<span class="hljs-keyword">lambda</span> x : i * x <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>)]
+</code></pre>
+<h2 id="what-you-might-have-expected-to-happen&#x4F60;&#x6240;&#x671F;&#x671B;&#x7684;">What You Might Have Expected to Happen(&#x4F60;&#x6240;&#x671F;&#x671B;&#x7684;)</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> multiplier <span class="hljs-keyword">in</span> create_multipliers():
+    <span class="hljs-keyword">print</span> multiplier(<span class="hljs-number">2</span>)
+</code></pre>
+<p><em>A list containing five functions that each have their own closed-over i variable that multiplies their argument, producing:</em></p>
+<p>&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E94;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x5B83;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x5C01;&#x95ED;&#x53D8;&#x91CF;i&#x4E58;&#x4EE5;&#x5B83;&#x4EEC;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5F97;&#x5230;:</p>
+<pre><code class="lang-python"><span class="hljs-number">0</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">4</span>
+<span class="hljs-number">6</span>
+<span class="hljs-number">8</span>
+</code></pre>
+<h2 id="what-does-happen&#x800C;&#x4E8B;&#x5B9E;&#x662F;">What Does Happen(&#x800C;&#x4E8B;&#x5B9E;&#x662F;)</h2>
+<pre><code class="lang-python"><span class="hljs-number">8</span>
+<span class="hljs-number">8</span>
+<span class="hljs-number">8</span>
+<span class="hljs-number">8</span>
+<span class="hljs-number">8</span>
+</code></pre>
+<p><em>Five functions are created; instead all of them just multiply x by 4.</em></p>
+<p>&#x4E94;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x521B;&#x5EFA;&#x4E86;&#xFF0C;&#x5B83;&#x4EEC;&#x5168;&#x90FD;&#x7528;4&#x4E58;&#x4EE5; x &#x3002;</p>
+<p><em>Python&#x2019;s closures are late binding. This means that the values of variables used in closures are looked up at the time the inner function is called.</em></p>
+<p>Python&#x7684;&#x95ED;&#x5305;&#x662F; &#x8FDF;&#x7ED1;&#x5B9A;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x95ED;&#x5305;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x662F;&#x5728;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x67E5;&#x8BE2;&#x5F97;&#x5230;&#x7684;&#x3002;</p>
+<p><em>Here, whenever any of the returned functions are called, the value of i is looked up in the surrounding scope at call time. By then, the loop has completed and i is left with its final value of 4.</em></p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x4E0D;&#x8BBA; &#x4EFB;&#x4F55; &#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8C03;&#x7528;&#x7684;&#xFF0C;i&#x7684;&#x503C;&#x662F;&#x8C03;&#x7528;&#x65F6;&#x5728;&#x5468;&#x56F4;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x67E5;&#x8BE2;&#x5230;&#x7684;&#x3002; &#x63A5;&#x7740;&#xFF0C;&#x5FAA;&#x73AF;&#x5B8C;&#x6210;&#xFF0C; i &#x7684;&#x503C;&#x6700;&#x7EC8;&#x53D8;&#x6210;&#x4E86;4&#x3002;</p>
+<p><em>What&#x2019;s particularly nasty about this gotcha is the seemingly prevalent misinformation that this has something to do with <a href="http://docs.python.org/reference/expressions.html#lambda" target="_blank">lambdas</a> in Python. Functions created with a lambda expression are in no way special, and in fact the same exact behavior is exhibited by just using an ordinary def:</em></p>
+<p>&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x9677;&#x9631;&#x6709;&#x4E00;&#x4E2A;&#x666E;&#x904D;&#x4E25;&#x91CD;&#x7684;&#x8BEF;&#x89E3;&#xFF0C;&#x5B83;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x548C;Python&#x7684; <a href="http://docs.python.org/reference/expressions.html#lambda" target="_blank">lambdas</a> &#x6709;&#x5173;&#x3002; &#x7531; lambda &#x8868;&#x8FBE;&#x5F0F;&#x521B;&#x5EFA;&#x7684;&#x51FD;&#x6570;&#x5E76;&#x6CA1;&#x4EC0;&#x4E48;&#x7279;&#x522B;&#xFF0C;&#x800C;&#x4E14;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x95EE;&#x9898;&#x4E5F;&#x51FA;&#x73B0;&#x5728;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7684; &#x5B9A;&#x4E49; &#x4E0A;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_multipliers</span><span class="hljs-params">()</span>:</span>
+    multipliers = []
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiplier</span><span class="hljs-params">(x)</span>:</span>
+            <span class="hljs-keyword">return</span> i * x
+        multipliers.append(multiplier)
+    <span class="hljs-keyword">return</span> multipliers
+</code></pre>
+<h2 id="what-you-should-do-instead&#x4F60;&#x8BE5;&#x5982;&#x4F55;&#x505A;">What You Should Do Instead(&#x4F60;&#x8BE5;&#x5982;&#x4F55;&#x505A;)</h2>
+<p><em>The most general solution is arguably a bit of a hack. Due to Python&#x2019;s aforementioned behavior concerning evaluating default arguments to functions (see Mutable Default Arguments), you can create a closure that binds immediately to its arguments by using a default arg like so</em></p>
+<p>&#x6700;&#x4E00;&#x822C;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x6709;&#x70B9;&#x53D6;&#x5DE7;&#xFF08;hack&#xFF09;&#x3002;&#x7531;&#x4E8E;Python&#x62E5;&#x6709;&#x5728;&#x524D;&#x6587;&#x63D0;&#x5230;&#x7684;&#x4E3A;&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x53C2;&#x6570; &#x8D4B;&#x503C;&#x7684;&#x884C;&#x4E3A;&#xFF08;&#x53C2;&#x89C1;&#x53EF;&#x53D8;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF09;,&#x60A8;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7ACB;&#x5373;&#x7ED1;&#x5B9A;&#x53C2;&#x6570;&#x7684;&#x95ED;&#x5305;,&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_multipliers</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> [<span class="hljs-keyword">lambda</span> x, i=i : i* x <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>)]
+</code></pre>
+<p><em>Alternatively, you can use the functools.partial function:</em></p>
+<p>&#x6216;&#x8005;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; functools.partial &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> functools <span class="hljs-keyword">import</span> partial
+<span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> mul
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_multipliers</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> [partial(mul, i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>)]
+</code></pre>
+<h2 id="when-the-gotcha-isnt-a-gotcha&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9677;&#x9631;&#x4E0D;&#x662F;&#x9677;&#x9631;">When the Gotcha Isn&#x2019;t a Gotcha(&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9677;&#x9631;&#x4E0D;&#x662F;&#x9677;&#x9631;)</h2>
+<p><em>Sometimes you want your closures to behave this way. Late binding is good in lots of situations. Looping to create unique functions is unfortunately a case where they can cause hiccups.</em></p>
+<p>&#x6709;&#x65F6;&#x60A8;&#x5C31;&#x60F3;&#x8981;&#x95ED;&#x5305;&#x6709;&#x5982;&#x6B64;&#x8868;&#x73B0;&#xFF0C;&#x8FDF;&#x7ED1;&#x5B9A;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x3002;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;&#x5FAA;&#x73AF;&#x521B;&#x5EFA; &#x72EC;&#x7279;&#x7684;&#x51FD;&#x6570;&#x662F;&#x4E00;&#x79CD;&#x4F1A;&#x4F7F;&#x5B83;&#x4EEC;&#x51FA;&#x5DEE;&#x9519;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<h1 id="bytecode-pyc-files-everywhere&#x5B57;&#x8282;&#x7801;&#x65E0;&#x5904;&#x4E0D;&#x5728;">Bytecode (.pyc) Files Everywhere!(&#x5B57;&#x8282;&#x7801;&#x65E0;&#x5904;&#x4E0D;&#x5728;)</h1>
+<p><em>By default, when executing Python code from files, the Python interpreter will automatically write a bytecode version of that file to disk, e.g. <code>module.pyc</code>.</em></p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x6267;&#x884C;Python&#x4EE3;&#x7801;&#x65F6;&#xFF0C;Python&#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x8282;&#x7801;&#x7248;&#x672C;&#x5199;&#x5165;&#x78C1;&#x76D8;&#x3002; &#x6BD4;&#x5982;&#xFF0C; <code>module.pyc</code>&#x3002;</p>
+<p><em>These <code>.pyc</code> files should not be checked into your source code repositories.</em></p>
+<p>&#x8FD9;&#x4E9B; <code>.pyc</code> &#x6587;&#x4EF6;&#x4E0D;&#x5E94;&#x8BE5;&#x52A0;&#x5165;&#x5230;&#x60A8;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x3002;</p>
+<p><em>Theoretically, this behavior is on by default, for performance reasons. Without these bytecode files present, Python would re-generate the bytecode every time the file is loaded.</em></p>
+<p>&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;&#x51FA;&#x4E8E;&#x6027;&#x80FD;&#x539F;&#x56E0;&#xFF0C;&#x6B64;&#x884C;&#x4E3A;&#x9ED8;&#x8BA4;&#x4E3A;&#x5F00;&#x542F;&#x3002;&#x6CA1;&#x6709;&#x8FD9;&#x4E9B;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#xFF0C;Python&#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x65F6; &#x91CD;&#x65B0;&#x751F;&#x6210;&#x5B57;&#x8282;&#x7801;&#x3002;</p>
+<h2 id="disabling-bytecode-pyc-files&#x7981;&#x7528;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;">Disabling Bytecode (.pyc) Files(&#x7981;&#x7528;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;)</h2>
+<p><em>Luckily, the process of generating the bytecode is extremely fast, and isn&#x2019;t something you need to worry about while developing your code.</em></p>
+<p>&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;&#x751F;&#x6210;&#x5B57;&#x8282;&#x7801;&#x7684;&#x8FC7;&#x7A0B;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4EE3;&#x7801;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x62C5;&#x5FC3;&#x3002;</p>
+<p><em>Those files are annoying, so let&#x2019;s get rid of them!</em></p>
+<p>&#x90A3;&#x4E9B;&#x6587;&#x4EF6;&#x5F88;&#x8BA8;&#x538C;&#xFF0C;&#x6240;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x6446;&#x8131;&#x4ED6;&#x4EEC;&#x5427;&#xFF01;</p>
+<pre><code class="lang-shell">$ export PYTHONDONTWRITEBYTECODE=1
+</code></pre>
+<p>With the <code>$PYTHONDONTWRITEBYTECODE</code> environment variable set, Python will no longer write these files to disk, and your development environment will remain nice and clean.
+&#x4F7F;&#x7528; <code>$PYTHONDONTWRITEBYTECODE</code>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;Python&#x5219;&#x4E0D;&#x4F1A;&#x628A;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C; &#x60A8;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5C06;&#x4F1A;&#x4FDD;&#x6301;&#x826F;&#x597D;&#x548C;&#x5E72;&#x51C0;&#x3002;</p>
+<p>I recommend setting this environment variable in your<code>~/.profile</code>.</p>
+<p>&#x6211;&#x5EFA;&#x8BAE;&#x5728;&#x60A8;&#x7684; <code>~/.profile</code> &#x91CC;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;</p>
+<h2 id="removing-bytecode-pyc-files&#x79FB;&#x9664;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;">Removing Bytecode (.pyc) Files(&#x79FB;&#x9664;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;)</h2>
+<p><em>Here&#x2019;s nice trick for removing all of these files, if they already exist:</em></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5220;&#x9664;&#x6240;&#x6709;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x597D;&#x65B9;&#x6CD5;:</p>
+<pre><code class="lang-shell"> find . -type f -name &quot; * .py[co]&quot; -delete -or -type d -name &quot;__pycache__&quot; -delete
+</code></pre>
+<p><em>Run that from the root directory of your project, and all <code>.pyc</code> files will suddenly vanish. Much better.</em></p>
+<p>&#x4ECE;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x8FD0;&#x884C;&#xFF0C;&#x6240;&#x6709; <code>.pyc</code> &#x6587;&#x4EF6;&#x4F1A;&#x55D6;&#x5730;&#x4E00;&#x4E0B;&#x6D88;&#x5931;&#xFF0C; &#x597D;&#x591A;&#x4E86;~</p>
+<h2 id="version-control-ignores&#x7248;&#x672C;&#x63A7;&#x5236;&#x5FFD;&#x7565;">Version Control Ignores(&#x7248;&#x672C;&#x63A7;&#x5236;&#x5FFD;&#x7565;)</h2>
+<p><em>If you still need the <code>.pyc</code> files for performance reasons, you can always add them to the ignore files of your version control repositories. Popular version control systems have the ability to use wildcards defined in a file to apply special rules.</em></p>
+<p>&#x5982;&#x679C;&#x7531;&#x4E8E;&#x6027;&#x80FD;&#x539F;&#x56E0;&#x4ECD;&#x7136;&#x9700;&#x8981;<code>.pyc</code>&#x6587;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x5C06;&#x5B83;&#x4EEC;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x63A7;&#x5236;&#x5B58;&#x50A8;&#x5E93;&#x7684;&#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x6D41;&#x884C;&#x7684;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x901A;&#x914D;&#x7B26;&#x6765;&#x5E94;&#x7528;&#x7279;&#x6B8A;&#x89C4;&#x5219;&#x3002;</p>
+<p><em>An ignore file will make sure the matching files don&#x2019;t get checked into the repository. <a href="https://git-scm.com/" target="_blank">Git</a> uses <code>.gitignore</code> while <a href="https://www.mercurial-scm.org/" target="_blank">Mercurial</a> uses <code>.hgignore</code>.</em></p>
+<p>&#x4E00;&#x4EFD;&#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x5C06;&#x786E;&#x4FDD;&#x5339;&#x914D;&#x7684;&#x6587;&#x4EF6;&#x672A;&#x88AB;&#x68C0;&#x5165;&#x5B58;&#x50A8;&#x5E93;&#x3002;<a href="https://git-scm.com/" target="_blank">Git</a> &#x4F7F;&#x7528; <code>.gitignore</code>&#xFF0C;&#x800C;<a href="https://www.mercurial-scm.org/" target="_blank">Mercurial</a> &#x4F7F;&#x7528;<code>.hgignore</code>&#x3002;</p>
+<p><em>At the minimum your ignore files should look like this.</em></p>
+<p>&#x81F3;&#x5C11;&#x60A8;&#x7684;&#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x3002;</p>
+<pre><code class="lang-file"># This line is not needed for .gitignore files.
+# .gitignore &#x6587;&#x4EF6;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x884C;
+syntax:glob 
+
+# Will match .pyc, .pyo and .pyd files.
+# &#x5C06;&#x5339;&#x914D; .pyc&#x3001;.pyo &#x548C; .pyd&#x6587;&#x4EF6;
+* .py[cod]
+
+# Exclude the whole folder
+# &#x6392;&#x9664;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x5939;
+__pycache__/
+</code></pre>
+<p><em>You may wish to include more files and directories depending on your needs. The next time you commit to the repository, these files will not be included.</em></p>
+<p>&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x6839;&#x636E;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x3002;&#x4E0B;&#x6B21;&#x63D0;&#x4EA4;&#x5230;&#x5B58;&#x50A8;&#x5E93;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5C06;&#x4E0D;&#x88AB;&#x5305;&#x62EC;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.6.Logging--日志.html" class="navigation navigation-prev " aria-label="Previous page: 3.6.日志">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.8.Choosing a License--选择一个许可.html" class="navigation navigation-next " aria-label="Next page: 3.8.选择一个许可">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.7.常见陷阱","level":"1.4.7","depth":2,"next":{"title":"3.8.选择一个许可","level":"1.4.8","depth":2,"path":"3.写出优雅的Python代码/3.8.Choosing a License--选择一个许可.md","ref":"3.写出优雅的Python代码/3.8.Choosing a License--选择一个许可.md","articles":[]},"previous":{"title":"3.6.日志","level":"1.4.6","depth":2,"path":"3.写出优雅的Python代码/3.6.Logging--日志.md","ref":"3.写出优雅的Python代码/3.6.Logging--日志.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3.写出优雅的Python代码/3.7.Common Gotchas--常见陷阱.md","mtime":"2018-02-20T13:30:59.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T13:31:28.762Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
