@@ -1,0 +1,733 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2.代码风格 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.3.Reading Great Code--阅读好的代码.html" />
+    
+    
+    <link rel="prev" href="3.1.Structuring Your Project--结构化您的工程.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0.介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.起步/">
+            
+                <a href="../1.起步/">
+            
+                    
+                    1.起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.开发环境/">
+            
+                <a href="../2.开发环境/">
+            
+                    
+                    2.开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.写出优雅的Python代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                <a href="3.1.Structuring Your Project--结构化您的工程.html">
+            
+                    
+                    3.1.结构化您的工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="3.2.Code Style--代码风格.html">
+            
+                <a href="3.2.Code Style--代码风格.html">
+            
+                    
+                    3.2.代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3.Reading Great Code--阅读好的代码.html">
+            
+                <a href="3.3.Reading Great Code--阅读好的代码.html">
+            
+                    
+                    3.3.阅读好的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3.4.Documentation--文档.html">
+            
+                <a href="3.4.Documentation--文档.html">
+            
+                    
+                    3.4.文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3.5.Testing Your Code--测试你的代码.html">
+            
+                <a href="3.5.Testing Your Code--测试你的代码.html">
+            
+                    
+                    3.5.测试你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2.代码风格</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><em>If you ask Python programmers what they like most about Python, they will often cite its high readability. Indeed, a high level of readability is at the heart of the design of the Python language, following the recognized fact that code is read much more often than it is written.</em></p>
+<p>&#x5982;&#x679C;&#x60A8;&#x95EE;Python&#x7A0B;&#x5E8F;&#x5458;&#x6700;&#x559C;&#x6B22;Python&#x7684;&#x4EC0;&#x4E48;&#xFF0C;&#x4ED6;&#x4EEC;&#x603B;&#x4F1A;&#x8BF4;&#x662F;Python&#x7684;&#x9AD8;&#x53EF;&#x8BFB;&#x6027;&#x3002; &#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x9AD8;&#x5EA6;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x662F;Python&#x8BED;&#x8A00;&#x7684;&#x8BBE;&#x8BA1;&#x6838;&#x5FC3;&#x3002;&#x8FD9;&#x57FA;&#x4E8E;&#x8FD9;&#x6837;&#x7684;&#x4E8B;&#x5B9E;&#xFF1A;&#x4EE3;&#x7801;&#x7684; &#x9605;&#x8BFB;&#x6BD4;&#x7F16;&#x5199;&#x66F4;&#x52A0;&#x9891;&#x7E41;&#x3002;</p>
+<p><em>One reason for the high readability of Python code is its relatively complete set of Code Style guidelines and  &#x201C;Pythonic&#x201D; idioms.</em></p>
+<p>Python&#x4EE3;&#x7801;&#x5177;&#x6709;&#x9AD8;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x539F;&#x56E0;&#x662F;&#x5B83;&#x7684;&#x76F8;&#x5BF9;&#x5B8C;&#x6574;&#x7684;&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x6307;&#x5F15;&#x548C; &#x201C;Pythonic&#x201D; &#x7684;&#x4E60;&#x8BED;&#x3002;</p>
+<p><em>When a veteran Python developer (a Pythonista) calls portions of code not &#x201C;Pythonic&#x201D;, they usually mean that these lines of code do not follow the common guidelines and fail to express its intent in what is considered the best (hear: most readable) way.</em></p>
+<p>&#x5F53;&#x4E00;&#x4F4D;&#x5BCC;&#x6709;&#x7ECF;&#x9A8C;&#x7684;Python&#x5F00;&#x53D1;&#x8005;&#xFF08;Pythonista&#xFF09;&#x6307;&#x51FA;&#x67D0;&#x6BB5;&#x4EE3;&#x7801;&#x5E76;&#x4E0D; &#x201C;Pythonic&#x201D;&#x65F6;&#xFF0C; &#x901A;&#x5E38;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x5E76;&#x6CA1;&#x6709;&#x9075;&#x5FAA;&#x901A;&#x7528;&#x7684;&#x6307;&#x5BFC;&#x65B9;&#x9488;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x7528;&#x6700;&#x4F73;&#x7684;&#xFF08;&#x6700;&#x53EF;&#x8BFB;&#x7684;&#xFF09;&#x65B9;&#x5F0F; &#x6765;&#x8868;&#x8FBE;&#x610F;&#x56FE;&#x3002;</p>
+<p><em>On some border cases, no best way has been agreed upon on how to express an intent in Python code, but these cases are rare.</em></p>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x8FB9;&#x7F18;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Python&#x4EE3;&#x7801;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x5927;&#x5BB6;&#x90FD;&#x8BA4;&#x540C;&#x7684;&#x8868;&#x8FBE;&#x610F;&#x56FE;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x90FD;&#x5F88;&#x5C11;&#x89C1;&#x3002;</p>
+<p>[TOC]</p>
+<h1 id="general-concepts&#x4E00;&#x822C;&#x6982;&#x5FF5;">General concepts(&#x4E00;&#x822C;&#x6982;&#x5FF5;)</h1>
+<h2 id="explicit-code&#x660E;&#x786E;&#x7684;&#x4EE3;&#x7801;">Explicit code(&#x660E;&#x786E;&#x7684;&#x4EE3;&#x7801;)</h2>
+<p><em>While any kind of black magic is possible with Python, the most explicit and straightforward manner is preferred.</em></p>
+<p>&#x5728;&#x5B58;&#x5728;&#x5404;&#x79CD;&#x9ED1;&#x9B54;&#x6CD5;&#x7684;Python&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x63D0;&#x5021;&#x6700;&#x660E;&#x786E;&#x548C;&#x76F4;&#x63A5;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code>def make_complex( * args):
+    x, y = args
+    return dict( ** locals())
+</code></pre><p><strong>Good</strong></p>
+<pre><code>def make_complex(x, y):
+    return {&apos;x&apos;: x, &apos;y&apos;: y}
+</code></pre><p><em>In the good code above, x and y are explicitly received from the caller, and an explicit dictionary is returned. The
+developer using this function knows exactly what to do by reading the first and last lines, which is not the case with
+the bad example.</em></p>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x4F18;&#x96C5;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;x&#x548C;y&#x4EE5;&#x660E;&#x786E;&#x7684;&#x5B57;&#x5178;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x4F7F;&#x7528; &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x7B2C;&#x4E00;&#x548C;&#x6700;&#x540E;&#x4E00;&#x884C;&#xFF0C;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x5730;&#x77E5;&#x9053;&#x8BE5;&#x505A;&#x4EC0;&#x4E48;&#x3002;&#x800C;&#x5728; &#x7CDF;&#x7CD5;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5219;&#x6CA1;&#x6709;&#x90A3;&#x4E48;&#x660E;&#x786E;&#x3002;</p>
+<h2 id="one-statement-per-line&#x6BCF;&#x884C;&#x4E00;&#x4E2A;&#x58F0;&#x660E;">One statement per line(&#x6BCF;&#x884C;&#x4E00;&#x4E2A;&#x58F0;&#x660E;)</h2>
+<p><em>While some compound statements such as list comprehensions are allowed and appreciated for their brevity and their
+expressiveness, it is bad practice to have two disjointed statements on the same line of code.</em></p>
+<p>&#x590D;&#x5408;&#x8BED;&#x53E5;&#xFF08;&#x6BD4;&#x5982;&#x8BF4;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#xFF09;&#x56E0;&#x5176;&#x7B80;&#x6D01;&#x548C;&#x8868;&#x8FBE;&#x6027;&#x53D7;&#x5230;&#x63A8;&#x5D07;&#xFF0C;&#x4F46;&#x5728;&#x540C;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x4E2D;&#x5199; &#x4E24;&#x6761;&#x72EC;&#x7ACB;&#x7684;&#x8BED;&#x53E5;&#x662F;&#x7CDF;&#x7CD5;&#x7684;&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code>print &apos;one&apos;; print &apos;two&apos;
+if x == 1: print &apos;one&apos;
+if &lt;complex comparison&gt; and &lt;other complex comparison&gt;:
+    # do something
+</code></pre><p><strong>Good</strong></p>
+<pre><code>print &apos;one&apos;
+print &apos;two&apos;
+if x == 1:
+    print &apos;one&apos;
+cond1 = &lt;complex comparison&gt;
+cond2 = &lt;other complex comparison&gt;
+if cond1 and cond2:
+    # do something
+</code></pre><h2 id="function-arguments&#x51FD;&#x6570;&#x53C2;&#x6570;">Function arguments(&#x51FD;&#x6570;&#x53C2;&#x6570;)</h2>
+<p><em>Arguments can be passed to functions in four different ways.</em></p>
+<p>&#x5C06;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x6709;&#x56DB;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li><p><strong>Positional arguments</strong> are mandatory and have no default values. They are the simplest form of arguments and they can be used for the few function arguments that are fully part of the function&#x2019;s meaning and their order is natural. For instance, in <code>send(message, recipient)</code> or <code>point(x, y)</code> the user of the function has no difficulty remembering that those two functions require two arguments, and in which order.
+<strong>&#x4F4D;&#x7F6E;&#x53C2;&#x6570;</strong>&#x662F;&#x5F3A;&#x5236;&#x7684;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002; &#x5B83;&#x4EEC;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x53C2;&#x6570;&#x5F62;&#x5F0F;&#xFF0C;&#x800C;&#x4E14;&#x80FD;&#x88AB;&#x7528;&#x5728; &#x4E00;&#x4E9B;&#x8FD9;&#x6837;&#x7684;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E2D;&#xFF1A;&#x5B83;&#x4EEC;&#x662F;&#x51FD;&#x6570;&#x610F;&#x4E49;&#x7684;&#x5B8C;&#x6574;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x987A;&#x5E8F;&#x662F;&#x81EA;&#x7136;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF1A;&#x5BF9;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x800C;&#x8A00;&#xFF0C;&#x8BB0;&#x4F4F; <code>send(message, recipient)</code> &#x6216; <code>point(x, y)</code> &#x9700;&#x8981;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x5E76;&#x4E0D;&#x56F0;&#x96BE;&#x3002;
+In those two cases, it is possible to use argument names when calling the functions and, doing so, it is possible to switch the order of arguments, calling for instance <code>send(recipient=&#x2019;World&#x2019;, message=&#x2019;Hello&#x2019;)</code> and <code>point(y=2, x=1)</code> but this reduces readability and is unnecessarily verbose, compared to the more straightforward
+calls to <code>send(&#x2019;Hello&#x2019;, &#x2019;World&#x2019;</code> and <code>point(1, 2)</code>.
+&#x5728;&#x8FD9;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x53C2;&#x6570;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4; send(recipient=&apos;World&apos;, message=&apos;Hello&apos;) &#x548C; point(y=2, x=1)&#x3002;&#x4F46;&#x548C; send( &apos;Hello&apos;, &apos;World&apos;) &#x548C; point(1, 2) &#x6BD4;&#x8D77;&#x6765;&#xFF0C;&#x8FD9;&#x964D;&#x4F4E;&#x4E86;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x800C;&#x4E14;&#x5E26;&#x6765;&#x4E86;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5197;&#x957F;&#x3002;</p>
+</li>
+<li><p><strong>Keyword arguments</strong> are not mandatory and have default values. They are often used for optional parameters sent to the function. When a function has more than two or three positional parameters, its signature is more difficult to remember and using keyword arguments with default values is helpful. For instance, a more complete <code>send</code> function could be defined as <code>send(message, to, cc=None, bcc=None)</code>. Here <code>cc</code> and <code>bcc</code> are optional, and evaluate to None when they are not passed another value.
+<strong>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</strong> &#x662F;&#x975E;&#x5F3A;&#x5236;&#x7684;&#xFF0C;&#x4E14;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x5B83;&#x4EEC;&#x7ECF;&#x5E38;&#x88AB;&#x7528;&#x5728;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x4E2D;&#x3002; &#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x8D85;&#x8FC7;&#x4E24;&#x4E2A;&#x6216;&#x4E09;&#x4E2A;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x4F1A;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x8BB0;&#x5FC6;&#xFF0C;&#x4F7F;&#x7528;&#x5E26;&#x6709;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x7684;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x5C06;&#x4F1A;&#x5E26;&#x6765;&#x5E2E;&#x52A9;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x66F4;&#x5B8C;&#x6574;&#x7684; send &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A; send(message, to, cc=None, bcc=None)&#x3002;&#x8FD9;&#x91CC;&#x7684; cc &#x548C; bcc &#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C; &#x5F53;&#x6CA1;&#x6709;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x4EEC;&#x5176;&#x4ED6;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x5C31;&#x662F;None&#x3002;
+Calling a function with keyword arguments can be done in multiple ways in Python, for example it is possible to follow the order of arguments in the definition without explicitly naming the arguments, like in <code>send(&#x2019;Hello&#x2019;, &#x2019;World&#x2019;, &#x2019;Cthulhu&#x2019;, &#x2019;God&#x2019;)</code>, sending a blind carbon copy to God. It would also be possible to name arguments in another order, like in <code>send(&#x2019;Hello again&#x2019;, &#x2019;World&#x2019;, bcc=&#x2019;God&#x2019;, cc=&#x2019;Cthulhu&#x2019;)</code>. Those two possibilities are better avoided without any strong reason to not follow the syntax that is the closest to the function definition: <code>send(&#x2019;Hello&#x2019;, &#x2019;World&#x2019;, cc=&#x2019;Cthulhu&#x2019;, bcc=&#x2019;God&#x2019;)</code>.
+Python&#x4E2D;&#x6709;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x5E26;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6309;&#x5B9A;&#x4E49;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x800C;&#x65E0;&#x9700; &#x660E;&#x786E;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;&#x6765;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x50CF; send(&apos;Hello&apos;, &apos;World&apos;, &apos;Cthulhu&apos;, &apos;God&apos;) &#x662F;&#x5C06;&#x5BC6;&#x4EF6; &#x53D1;&#x9001;&#x7ED9;&#x4E0A;&#x5E1D;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x53C2;&#x6570;&#x800C;&#x65E0;&#x9700;&#x9075;&#x5FAA;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x6765;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x50CF; send(&apos;Hello again&apos;, &apos;World&apos;, bcc=&apos;God&apos;, cc=&apos;Cthulhu&apos;) &#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5F3A;&#x6709;&#x529B;&#x7684;&#x7406;&#x7531; &#x4E0D;&#x53BB;&#x9075;&#x5FAA;&#x6700;&#x63A5;&#x8FD1;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;send(&apos;Hello&apos;, &apos;World&apos;, cc=&apos;Cthulhu&apos;, bcc=&apos;God&apos;) &#x90A3;&#x4E48; &#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x5E94;&#x8BE5;&#x662F;&#x8981;&#x6781;&#x529B;&#x907F;&#x514D;&#x7684;&#x3002;</p>
+</li>
+</ul>
+<p>As a side note, following <a href="http://en.wikipedia.org/wiki/You_ain&apos;t_gonna_need_it" target="_blank">YAGNI</a> principle, it is often harder to remove an optional argument (and its logic inside the function) that was added &#x201C;just in case&#x201D; and is seemingly never used, than to add a new optional argument and its logic when needed.
+&#x4F5C;&#x4E3A;&#x9644;&#x6CE8;&#xFF0C;&#x8BF7;&#x9075;&#x5FAA; <a href="http://en.wikipedia.org/wiki/You_ain&apos;t_gonna_need_it" target="_blank">YAGNI</a> &#x539F;&#x5219;&#x3002; &#x901A;&#x5E38;&#xFF0C;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x7528;&#x4F5C;&#x201C;&#x4EE5;&#x9632;&#x4E07;&#x4E00;&#x201D;&#x4F46;&#x5374;&#x770B;&#x8D77;&#x6765;&#x4ECE;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF08;&#x4EE5;&#x53CA;&#x5B83;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x903B;&#x8F91;&#xFF09;&#xFF0C;&#x6BD4; &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6240;&#x9700;&#x7684;&#x65B0;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x548C;&#x5B83;&#x7684;&#x903B;&#x8F91;&#x8981;&#x6765;&#x7684;&#x56F0;&#x96BE;</p>
+<ul>
+<li><p>The <strong>arbitrary argument list</strong> is the third way to pass arguments to a function. If the function intention is better expressed by a signature with an extensible number of positional arguments, it can be defined with the <code>*args</code> constructs. In the function body, <code>args</code> will be a tuple of all the remaining positional arguments. For example, <code>send(message, * args)</code> can be called with each recipient as an argument:<code>send(&#x2019;Hello&#x2019;, &#x2019;God&#x2019;, &#x2019;Mom&#x2019;, &#x2019;Cthulhu&#x2019;)</code>,  and in the function body <code>args</code> will be equal to<code>(&#x2019;God&#x2019;, &#x2019;Mom&#x2019;, &#x2019;Cthulhu&#x2019;)</code>.
+<strong>&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x5217;&#x8868;</strong> &#x662F;&#x7B2C;&#x4E09;&#x79CD;&#x7ED9;&#x51FD;&#x6570;&#x4F20;&#x53C2;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x51FD;&#x6570;&#x7684;&#x76EE;&#x7684;&#x901A;&#x8FC7;&#x5E26;&#x6709;&#x6570;&#x76EE;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x7684;&#x7B7E;&#x540D;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x7684;&#x8868;&#x8FBE;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x88AB;&#x5B9A;&#x4E49;&#x6210; <code>*args</code> &#x7684;&#x7ED3;&#x6784;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#xFF0C; <code>args</code> &#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x6240;&#x6709;&#x5269;&#x4F59;&#x7684;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C; &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4EFB;&#x4F55;&#x5BB9;&#x5668;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x53BB; &#x8C03;&#x7528; <code>send(message, *args)</code> &#xFF0C;&#x6BD4;&#x5982; <code>send(&apos;Hello&apos;, &apos;God&apos;, &apos;Mom&apos;, &apos;Cthulhu&apos;)</code>&#x3002; &#x5728;&#x6B64;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#xFF0C; <code>args</code> &#x76F8;&#x5F53;&#x4E8E; <code>(&apos;God&apos;,&apos;Mom&apos;, &apos;Cthulhu&apos;)</code>&#x3002;
+However, this construct has some drawbacks and should be used with caution. If a function receives a list of arguments of the same nature, it is often more clear to define it as a function of one argument, that argument being a list or any sequence. Here, if <code>send</code> has multiple recipients, it is better to define it explicitly: <code>send(message, recipients)</code> and call it with <code>send(&#x2019;Hello&#x2019;, [&#x2019;God&#x2019;, &#x2019;Mom&#x2019;, &#x2019;Cthulhu&#x2019;])</code>. This way, the user of the function can manipulate the recipient list as a list beforehand, and it opens the possibility to pass any sequence, including iterators, that cannot be unpacked as other sequences.
+&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x8FD9;&#x79CD;&#x7ED3;&#x6784;&#x6709;&#x4E00;&#x4E9B;&#x7F3A;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x5E94;&#x8BE5;&#x4E88;&#x4EE5;&#x6CE8;&#x610F;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x5177;&#x6709; &#x76F8;&#x540C;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x901A;&#x5E38;&#x628A;&#x5B83;&#x5B9A;&#x4E49;&#x6210;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x4EFB;&#x4F55;&#x5E8F;&#x5217;&#x4F1A;&#x66F4;&#x6E05;&#x6670;&#x3002; &#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x5982;&#x679C; send &#x53C2;&#x6570;&#x6709;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#xFF08;recipients&#xFF09;&#xFF0C;&#x5C06;&#x4E4B;&#x5B9A;&#x4E49;&#x6210; send(message, recipients) &#x4F1A;&#x66F4;&#x660E;&#x786E;&#xFF0C;&#x8C03;&#x7528;&#x5B83;&#x65F6;&#x5C31;&#x4F7F;&#x7528; send(&apos;Hello&apos;, [&apos;God&apos;, &apos;Mom&apos;, &apos;Cthulhu&apos;])&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x4E8B;&#x5148;&#x5C06;&#x5BB9;&#x5668;&#x5217;&#x8868;&#x7EF4;&#x62A4;&#x6210;&#x5217;&#x8868;&#xFF08;list&#xFF09;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E3A;&#x4F20;&#x9012;&#x5404;&#x79CD;&#x4E0D;&#x80FD;&#x88AB;&#x8F6C;&#x53D8;&#x6210;&#x5176;&#x4ED6;&#x5E8F;&#x5217;&#x7684;&#x5E8F;&#x5217;&#xFF08;&#x5305;&#x62EC;&#x8FED;&#x4EE3;&#x5668;&#xFF09;&#x5E26;&#x6765;&#x4E86;&#x53EF;&#x80FD;&#x3002;</p>
+</li>
+<li><p>The <strong>arbitrary keyword argument dictionary</strong> is the last way to pass arguments to functions. If the function requires an undetermined series of named arguments, it is possible to use the <code>** kwargs</code> construct. In the function body, <code>kwargs</code> will be a dictionary of all the passed named arguments that have not been caught by other keyword arguments in the function signature.
+<strong>&#x4EFB;&#x610F;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x5B57;&#x5178;</strong>&#x662F;&#x6700;&#x540E;&#x4E00;&#x79CD;&#x7ED9;&#x51FD;&#x6570;&#x4F20;&#x53C2;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x51FD;&#x6570;&#x8981;&#x6C42;&#x4E00;&#x7CFB;&#x5217;&#x5F85;&#x5B9A;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>**kwargs</code> &#x7684;&#x7ED3;&#x6784;&#x3002;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#xFF0C;<code>kwargs</code> &#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x6240;&#x6709;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x4F46;&#x6CA1;&#x6709;&#x88AB;&#x5176;&#x4ED6;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x6355;&#x6349;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;
+The same caution as in the case of arbitrary argument list is necessary, for similar reasons: these powerful techniques are to be used when there is a proven necessity to use them, and they should not be used if the simpler and clearer construct is sufficient to express the function&#x2019;s intention.
+&#x548C;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x6240;&#x9700;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x76F8;&#x4F3C;&#x7684;&#x539F;&#x56E0;&#x662F;&#xFF1A;&#x8FD9;&#x4E9B;&#x5F3A;&#x5927;&#x7684;&#x6280;&#x672F;&#x662F;&#x7528;&#x5728;&#x88AB;&#x8BC1;&#x660E;&#x786E;&#x5B9E; &#x9700;&#x8981;&#x7528;&#x5230;&#x5B83;&#x4EEC;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0D;&#x5E94;&#x8BE5;&#x88AB;&#x7528;&#x5728;&#x80FD;&#x7528;&#x66F4;&#x7B80;&#x5355;&#x548C;&#x66F4;&#x660E;&#x786E;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x6765;&#x8DB3;&#x591F;&#x8868;&#x8FBE;&#x51FD;&#x6570;&#x610F;&#x56FE; &#x7684;&#x60C5;&#x51B5;&#x4E2D;&#x3002;
+It is up to the programmer writing the function to determine which arguments are positional arguments and which are optional keyword arguments, and to decide whether to use the advanced techniques of arbitrary argument passing. If the advice above is followed wisely, it is possible and enjoyable to write Python functions that are:
+&#x7F16;&#x5199;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x91C7;&#x7528;&#x4F55;&#x79CD;&#x53C2;&#x6570;&#x5F62;&#x5F0F;&#xFF0C;&#x662F;&#x7528;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x8FD8;&#x662F;&#x53EF;&#x9009;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x5F62;&#x5982;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x7684;&#x9AD8;&#x7EA7;&#x6280;&#x672F;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x7531;&#x7A0B;&#x5E8F;&#x5458;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x3002;&#x5982;&#x679C;&#x80FD;&#x660E;&#x667A;&#x5730;&#x9075;&#x5FAA;&#x4E0A;&#x8FF0;&#x5EFA;&#x8BAE;&#xFF0C;&#x5C31;&#x53EF;&#x80FD;&#x4E14;&#x975E;&#x5E38;&#x4EAB;&#x53D7;&#x5730;&#x5199;&#x51FA; &#x8FD9;&#x6837;&#x7684;Python&#x51FD;&#x6570;&#xFF1A;</p>
+<ul>
+<li>easy to read (the name and arguments need no explanations)
+&#x6613;&#x8BFB;&#xFF08;&#x540D;&#x5B57;&#x548C;&#x53C2;&#x6570;&#x65E0;&#x9700;&#x89E3;&#x91CA;&#xFF09;</li>
+<li>easy to change (adding a new keyword argument does not break other parts of the code)
+&#x6613;&#x6539;&#xFF08;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x4E0D;&#x4F1A;&#x7834;&#x574F;&#x4EE3;&#x7801;&#x7684;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h2 id="avoid-the-magical-wand&#x907F;&#x514D;&#x9B54;&#x6CD5;&#x65B9;&#x6CD5;">Avoid the magical wand(&#x907F;&#x514D;&#x9B54;&#x6CD5;&#x65B9;&#x6CD5;)</h2>
+<p><em>A powerful tool for hackers, Python comes with a very rich set of hooks and tools allowing you to do almost any kind of tricky tricks. For instance, it is possible to do each of the following:</em></p>
+<p>Python &#x5BF9;&#x9A87;&#x5BA2;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x6709;&#x529B;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x62E5;&#x6709;&#x975E;&#x5E38;&#x4E30;&#x5BCC;&#x7684;&#x94A9;&#x5B50;&#xFF08;hook&#xFF09;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5141;&#x8BB8;&#x60A8;&#x65BD;&#x5C55;&#x51E0;&#x4E4E;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7684;&#x6280;&#x5DE7;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x505A;&#x4EE5;&#x4E0B;&#x6BCF;&#x4EF6;&#x4E8B;:</p>
+<ul>
+<li><p>change how objects are created and instantiated
+&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x548C;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x65B9;&#x5F0F;</p>
+</li>
+<li><p>change how the Python interpreter imports modules
+&#x6539;&#x53D8;Python&#x89E3;&#x91CA;&#x5668;&#x5BFC;&#x5165;&#x6A21;&#x5757;&#x7684;&#x65B9;&#x5F0F;</p>
+</li>
+<li><p>it is even possible (and recommended if needed) to embed C routines in Python.
+&#x751A;&#x81F3;&#x53EF;&#x80FD;&#xFF08;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#x4E5F;&#x662F;&#x88AB;&#x63A8;&#x8350;&#x7684;&#xFF09;&#x5728;Python&#x4E2D;&#x5D4C;&#x5165;C&#x7A0B;&#x5E8F;</p>
+</li>
+</ul>
+<p><em>However, all these options have many drawbacks and it is always better to use the most straightforward way to achieve your goal. The main drawback is that readability suffers greatly when using these constructs. Many code analysis tools, such as pylint or pyflakes, will be unable to parse this &#x201C;magic&#x201D; code.</em></p>
+<p>&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8FD9;&#x4E9B;&#x9009;&#x62E9;&#x90FD;&#x6709;&#x8BB8;&#x591A;&#x7F3A;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x66F4;&#x52A0;&#x76F4;&#x63A5;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FBE;&#x6210;&#x76EE;&#x6807;&#x901A;&#x5E38;&#x662F;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x4EEC;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x53EF;&#x8BFB;&#x6027;&#x4E0D;&#x9AD8;&#x3002;&#x8BB8;&#x591A;&#x4EE3;&#x7801;&#x5206;&#x6790;&#x5DE5;&#x5177;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4; pylint &#x6216;&#x8005; pyflakes&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#x8FD9;&#x79CD;&#x201C;&#x9B54;&#x6CD5;&#x201D;&#x4EE3;&#x7801;&#x3002;</p>
+<p><em>We consider that a Python developer should know about these nearly infinite possibilities, because it instills confidence that no impassable problem will be on the way. However, knowing how and particularly when <code>not</code> to use them is very important.</em></p>
+<p>&#x6211;&#x4EEC;&#x8BA4;&#x4E3A;Python&#x5F00;&#x53D1;&#x8005;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x8FD1;&#x4E4E;&#x65E0;&#x9650;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4E3A;&#x6211;&#x4EEC;&#x704C;&#x8F93;&#x4E86;&#x6CA1;&#x6709;&#x4E0D;&#x53EF;&#x80FD;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x4FE1;&#x5FC3;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x77E5;&#x9053;&#x5982;&#x4F55;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x4F55;&#x65F6; <code>&#x4E0D;&#x80FD;</code> &#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x3002;</p>
+<p><em>Like a kung fu master, a Pythonista knows how to kill with a single finger, and never to actually do it.</em></p>
+<p>&#x5C31;&#x50CF;&#x4E00;&#x4F4D;&#x529F;&#x592B;&#x5927;&#x5E08;&#xFF0C;&#x4E00;&#x4E2A;Pythonista&#x77E5;&#x9053;&#x5982;&#x4F55;&#x7528;&#x4E00;&#x4E2A;&#x624B;&#x6307;&#x6740;&#x6B7B;&#x5BF9;&#x65B9;&#xFF0C;&#x4F46;&#x4ECE;&#x4E0D;&#x4F1A;&#x90A3;&#x4E48;&#x53BB;&#x505A;&#x3002;</p>
+<h2 id="we-are-all-responsible-users&#x6211;&#x4EEC;&#x90FD;&#x662F;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#x7528;&#x6237;">We are all responsible users(&#x6211;&#x4EEC;&#x90FD;&#x662F;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#x7528;&#x6237;)</h2>
+<p><em>As seen above, Python allows many tricks, and some of them are potentially dangerous. A good example is that any client code can override an object&#x2019;s properties and methods: there is no &#x201C;private&#x201D; keyword in Python. This philosophy, very different from highly defensive languages like Java, which give a lot of mechanisms to prevent any misuse, is expressed by the saying: &#x201C;We are all responsible users&#x201D;.</em></p>
+<p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;Python&#x5141;&#x8BB8;&#x5F88;&#x591A;&#x6280;&#x5DE7;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x5177;&#x6709;&#x6F5C;&#x5728;&#x7684;&#x5371;&#x9669;&#x3002;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#xFF1A;&#x4EFB;&#x4F55;&#x5BA2;&#x6237;&#x7AEF; &#x4EE3;&#x7801;&#x80FD;&#x591F;&#x91CD;&#x5199;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF08;Python&#x4E2D;&#x6CA1;&#x6709;&#x201C;private&#x201D; &#x5173;&#x952E;&#x5B57;&#xFF09;&#x3002;&#x8FD9;&#x79CD;&#x54F2;&#x5B66;&#x662F;&#x5728;&#x8BF4;&#xFF1A;&#x201C;&#x6211;&#x4EEC;&#x90FD;&#x662F;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#x7528;&#x6237;&#x201D;&#xFF0C;&#x5B83;&#x548C;&#x9AD8;&#x5EA6;&#x9632;&#x5FA1;&#x6027;&#x7684;&#x8BED;&#x8A00;&#xFF08;&#x5982;Java&#xFF0C;&#x62E5;&#x6709;&#x5F88;&#x591A;&#x673A;&#x5236;&#x6765;&#x9884;&#x9632;&#x9519;&#x8BEF;&#x7684;&#x4F7F;&#x7528;&#xFF09;&#x6709;&#x7740;&#x975E;&#x5E38;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x3002;</p>
+<p><em>This doesn&#x2019;t mean that, for example, no properties are considered private, and that no proper encapsulation is possible in Python. Rather, instead of relying on concrete walls erected by the developers between their code and other&#x2019;s, the Python community prefers to rely on a set of conventions indicating that these elements should not be accessed directly.</em></p>
+<p>&#x8FD9;&#x5E76;&#x4E0D;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;Python&#x4E2D;&#x6CA1;&#x6709;&#x5C5E;&#x6027;&#x662F;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x4E5F;&#x4E0D;&#x610F;&#x5473;&#x7740;&#x6CA1;&#x6709;&#x5408;&#x9002;&#x7684;&#x5C01;&#x88C5;&#x65B9;&#x6CD5;&#x3002; &#x4E0E;&#x5176;&#x4F9D;&#x8D56;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x6811;&#x7ACB;&#x8D77;&#x7684;&#x4E00;&#x9053;&#x9053;&#x9694;&#x5899;&#xFF0C;Python&#x793E;&#x533A;&#x66F4;&#x613F;&#x610F;&#x4F9D;&#x9760;&#x4E00;&#x7EC4;&#x7EA6;&#x5B9A;&#xFF0C;&#x6765;&#x8868;&#x660E;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x4E0D;&#x5E94;&#x8BE5;&#x88AB;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x3002;</p>
+<p><em>The main convention for private properties and implementation details is to prefix all &#x201C;internals&#x201D; with an underscore. If the client code breaks this rule and accesses these marked elements, any misbehavior or problems encountered if the code is modified is the responsibility of the client code.</em></p>
+<p>&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x4E3B;&#x8981;&#x7EA6;&#x5B9A;&#x548C;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x662F;&#x5728;&#x6240;&#x6709;&#x7684;&#x201C;&#x5185;&#x90E8;&#x201D;&#x53D8;&#x91CF;&#x524D;&#x52A0;&#x4E00;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x3002;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801; &#x6253;&#x7834;&#x4E86;&#x8FD9;&#x6761;&#x89C4;&#x5219;&#x5E76;&#x8BBF;&#x95EE;&#x4E86;&#x5E26;&#x6709;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x56E0;&#x5185;&#x90E8;&#x4EE3;&#x7801;&#x7684;&#x6539;&#x53D8;&#x800C;&#x51FA;&#x73B0;&#x7684;&#x4EFB;&#x4F55;&#x4E0D;&#x5F53;&#x7684;&#x884C;&#x4E3A;&#x6216;&#x95EE;&#x9898;&#xFF0C;&#x90FD;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x7684;&#x8D23;&#x4EFB;&#x3002;</p>
+<p><em>Using this convention generously is encouraged: any method or property that is not intended to be used by client code should be prefixed with an underscore. This will guarantee a better separation of duties and easier modification of existing code; it will always be possible to publicize a private property, but making a public  property private might be a much harder operation.</em></p>
+<p>&#x9F13;&#x52B1;&#x201C;&#x6177;&#x6168;&#x5730;&#x201D;&#x4F7F;&#x7528;&#x6B64;&#x7EA6;&#x5B9A;&#xFF1A;&#x4EFB;&#x4F55;&#x4E0D;&#x5F00;&#x653E;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x6216;&#x5C5E;&#x6027;&#xFF0C;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF; &#x524D;&#x7F00;&#x3002;&#x8FD9;&#x5C06;&#x4FDD;&#x8BC1;&#x66F4;&#x597D;&#x7684;&#x804C;&#x8D23;&#x5212;&#x5206;&#x4EE5;&#x53CA;&#x66F4;&#x5BB9;&#x6613;&#x5BF9;&#x5DF2;&#x6709;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x5C06;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x516C;&#x5F00;&#x5316;&#x603B;&#x662F;&#x53EF;&#x80FD;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x628A;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x5C5E;&#x6027;&#x79C1;&#x6709;&#x5316;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x96BE;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+<h2 id="returning-values&#x8FD4;&#x56DE;&#x503C;">Returning values(&#x8FD4;&#x56DE;&#x503C;)</h2>
+<p><em>When a function grows in complexity it is not uncommon to use multiple return statements inside the function&#x2019;s body. However, in order to keep a clear intent and a sustainable readability level, it is preferable to avoid returning meaningful values from many output points in the body.</em></p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x53D8;&#x5F97;&#x590D;&#x6742;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x4F7F;&#x7528;&#x591A;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x8BED;&#x53E5;&#x5E76;&#x4E0D;&#x5C11;&#x89C1;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x51FD;&#x6570; &#x7684;&#x660E;&#x786E;&#x610F;&#x56FE;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x53EF;&#x6301;&#x7EED;&#x7684;&#x53EF;&#x8BFB;&#x6C34;&#x5E73;&#xFF0C;&#x66F4;&#x5EFA;&#x8BAE;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x503C;&#x3002;</p>
+<p><em>There are two main cases for returning values in a function: the result of the function return when it has been processed normally, and the error cases that indicate a wrong input parameter or any other reason for the function to not be able to complete its computation or task.</em></p>
+<p>&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;&#x51FD;&#x6570;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x9519;&#x8BEF;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8981;&#x4E48;&#x56E0;&#x4E3A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x8981;&#x4E48;&#x56E0;&#x4E3A;&#x5176;&#x4ED6;&#x5BFC;&#x81F4;&#x51FD;&#x6570;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BA1;&#x7B97;&#x6216;&#x4EFB;&#x52A1;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p><em>If you do not wish to raise exceptions for the second case, then returning a value, such as None or False, indicating that the function could not perform correctly might be needed. In this case, it is better to return as early as the incorrect context has been detected. It will help to flatten the structure of the function: all the code after the return-because-of-error statement can assume the condition is met to further compute the function&#x2019;s main result. Having multiple such return statements is often necessary.</em></p>
+<p>&#x5982;&#x679C;&#x60A8;&#x5728;&#x9762;&#x5BF9;&#x7B2C;&#x4E8C;&#x79CD;&#x60C5;&#x51B5;&#x65F6;&#x4E0D;&#x60F3;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#xFF08;&#x6BD4;&#x5982;&#x8BF4;None&#x6216;False&#xFF09;&#x6765;&#x8868;&#x660E;&#x51FD;&#x6570;&#x65E0;&#x6CD5;&#x6B63;&#x786E;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x9700;&#x8981;&#x7684;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8D8A;&#x65E9;&#x8FD4;&#x56DE;&#x6240;&#x53D1;&#x73B0;&#x7684;&#x4E0D;&#x6B63;&#x786E;&#x4E0A;&#x4E0B;&#x6587;&#x8D8A;&#x597D;&#x3002; &#x8FD9;&#x5C06;&#x5E2E;&#x52A9;&#x6241;&#x5E73;&#x5316;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x6784;&#xFF1A;&#x5728;&#x201C;&#x56E0;&#x4E3A;&#x9519;&#x8BEF;&#x800C;&#x8FD4;&#x56DE;&#x201D;&#x7684;&#x8BED;&#x53E5;&#x540E;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x80FD;&#x591F;&#x5047;&#x5B9A;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7ED3;&#x679C;&#x7684;&#x8FD0;&#x7B97;&#x3002;&#x6709;&#x591A;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x901A;&#x5E38;&#x662F;&#x9700;&#x8981;&#x7684;&#x3002;</p>
+<p><em>However, when a function has multiple main exit points for its normal course, it becomes difficult to debug the returned result, so it may be preferable to keep a single exit point. This will also help factoring out some code paths, and the multiple exit points are a probable indication that such a refactoring is needed.</em></p>
+<p>&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x5176;&#x6B63;&#x5E38;&#x8FC7;&#x7A0B;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x4E3B;&#x8981;&#x51FA;&#x53E3;&#x70B9;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x8C03;&#x8BD5;&#x548C;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#xFF0C;&#x6240;&#x4EE5;&#x4FDD;&#x6301;&#x5355;&#x4E2A;&#x51FA;&#x53E3;&#x70B9;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;&#x3002;&#x8FD9;&#x4E5F;&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x63D0;&#x53D6;&#x67D0;&#x4E9B;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#xFF0C;&#x800C;&#x4E14;&#x591A;&#x4E2A;&#x51FA;&#x53E3;&#x70B9; &#x5F88;&#x6709;&#x53EF;&#x80FD;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x91CD;&#x6784;&#x3002;</p>
+<pre><code>def complex_function(a, b, c):
+    if not a:
+        # Raising an exception might be better
+        # &#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;
+        return None
+    if not b:
+        # Raising an exception might be better
+        # &#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;
+        return None 
+    # Some complex code trying to compute x from a, b and c
+    # &#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x4EE3;&#x7801;&#x8BD5;&#x7740;&#x7528;a,b,c&#x6765;&#x8BA1;&#x7B97;x
+    # Resist temptation to return x if succeeded
+    # &#x5982;&#x679C;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x62B5;&#x5236;&#x4F4F;&#x8FD4;&#x56DE;x&#x7684;&#x8BF1;&#x60D1;
+    if not x:
+        # Some Plan-B computation of x
+         # &#x4E00;&#x4E9B;&#x5173;&#x4E8E;x&#x7684;&#x8BA1;&#x7B97;&#x7684;Plan-B
+    # One single exit point for the returned value x will help when maintaining the code
+    # # &#x8FD4;&#x56DE;&#x503C;x&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x51FA;&#x53E3;&#x70B9;&#x6709;&#x5229;&#x4E8E;&#x7EF4;&#x62A4;&#x4EE3;&#x7801;
+    return x
+</code></pre><h1 id="idioms&#x4E60;&#x8BED;">Idioms(&#x4E60;&#x8BED;)</h1>
+<p><em>A programming idiom, put simply, is a way to write code. The notion of programming idioms is discussed amply at <a href="http://c2.com/cgi/wiki?ProgrammingIdiom" target="_blank">c2</a> and at <a href="http://stackoverflow.com/questions/302459/what-is-a-programming-idiom" target="_blank">Stack Overflow</a>.</em></p>
+<p>&#x7F16;&#x7A0B;&#x4E60;&#x8BED;&#xFF0C;&#x8BF4;&#x5F97;&#x7B80;&#x5355;&#x4E9B;&#xFF0C;&#x5C31;&#x662F;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x7F16;&#x7A0B;&#x4E60;&#x8BED;&#x7684;&#x6982;&#x5FF5;&#x5728; <a href="http://c2.com/cgi/wiki?ProgrammingIdiom" target="_blank">c2</a> &#x548C; <a href="http://stackoverflow.com/questions/302459/what-is-a-programming-idiom" target="_blank">Stack Overflow</a> &#x4E0A;&#x6709;&#x5145;&#x8DB3;&#x7684;&#x8BA8;&#x8BBA;&#x3002;</p>
+<p><em>Idiomatic Python code is often referred to as being Pythonic.</em></p>
+<p>&#x91C7;&#x7528;&#x4E60;&#x8BED;&#x7684;Python&#x4EE3;&#x7801;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A; Pythonic&#x3002;</p>
+<p><em>Although there usually is one &#x2014; and preferably only one &#x2014; obvious way to do it; the way to write idiomatic Python code can be non-obvious to Python beginners. So, good idioms must be consciously acquired.</em></p>
+<p>&#x5C3D;&#x7BA1;&#x901A;&#x5E38;&#x6709;&#x4E00;&#x79CD; &#x2014; &#x800C;&#x4E14;&#x6700;&#x597D;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x2014;&#x660E;&#x663E;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x5199;&#x5F97;Pythonic&#xFF1B;&#x5BF9;Python &#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x5199;&#x51FA;&#x4E60;&#x8BED;&#x5F0F;&#x7684;Python&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x660E;&#x663E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x597D;&#x7684;&#x4E60;&#x8BED;&#x5FC5;&#x987B; &#x6709;&#x610F;&#x8BC6;&#x5730;&#x83B7;&#x53D6;&#x3002;</p>
+<p><em>Some common Python idioms follow:</em></p>
+<p>&#x5982;&#x4E0B;&#x6709;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;Python&#x4E60;&#x8BED;&#xFF1A;</p>
+<h2 id="unpacking&#x89E3;&#x5305;">Unpacking(&#x89E3;&#x5305;)</h2>
+<p><em>If you know the length of a list or tuple, you can assign names to its elements with unpacking. For example, since enumerate() will provide a tuple of two elements for each item in list:</em></p>
+<p>&#x5982;&#x679C;&#x60A8;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x8005;&#x5143;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x89E3;&#x5305;&#x5E76;&#x4E3A;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x53D6;&#x540D;&#x3002;&#x6BD4;&#x5982;&#xFF0C; enumerate() &#x4F1A;&#x5BF9;list&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x9879;&#x63D0;&#x4F9B;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code>for index, item in enumerate(some_list):
+    # do something with index and item
+</code></pre><p><em>You can use this to swap variables as well:</em></p>
+<p>&#x60A8;&#x4E5F;&#x80FD;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4EA4;&#x6362;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>a, b = b, a
+</code></pre><p><em>Nested unpacking works too:</em></p>
+<p>&#x5D4C;&#x5957;&#x89E3;&#x5305;&#x4E5F;&#x80FD;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<pre><code>a, (b, c) = 1, (2, 3)
+</code></pre><p><em>In Python 3, a new method of extended unpacking was introduced by <a href="https://www.python.org/dev/peps/pep-3132" target="_blank">PEP 3132</a>:</em></p>
+<p>&#x5728;Python 3&#x4E2D;&#xFF0C;&#x6269;&#x5C55;&#x89E3;&#x5305;&#x7684;&#x65B0;&#x65B9;&#x6CD5;&#x5728; <a href="https://www.python.org/dev/peps/pep-3132" target="_blank">PEP 3132</a> &#x6709;&#x4ECB;&#x7ECD;&#xFF1A;</p>
+<pre><code>a, *rest = [1, 2, 3]
+# a = 1, rest = [2, 3]
+a, *middle, c = [1, 2, 3, 4]
+# a = 1, middle = [2, 3], c = 4
+</code></pre><h2 id="create-an-ignored-variable&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x88AB;&#x5FFD;&#x7565;&#x7684;&#x53D8;&#x91CF;">Create an ignored variable(&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x88AB;&#x5FFD;&#x7565;&#x7684;&#x53D8;&#x91CF;)</h2>
+<p><em>If you need to assign something (for instance, in Unpacking) but will not need that variable, use __:</em></p>
+<p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x8D4B;&#x503C;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x5728; &#x89E3;&#x5305;&#xFF08;Unpacking&#xFF09; &#xFF09;&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; __:</p>
+<pre><code>filename = &apos;foobar.txt&apos;
+basename, __, ext = filename.rpartition(&apos;.&apos;)
+</code></pre><hr>
+<p>Note: Many Python style guides recommend the use of a single underscore &#x201C;<em>&#x201D; for throwaway variables rather than the double underscore &#x201C;__&#x201D; recommended here. The issue is that &#x201C;</em>&#x201D; is commonly used as an alias for the <code>gettext()</code> function, and is also used at the interactive prompt to hold the value of the last operation. Using a
+double underscore instead is just as clear and almost as convenient, and eliminates the risk of accidentally interfering with either of these other use cases.</p>
+<p>&#x8BB8;&#x591A;Python&#x98CE;&#x683C;&#x6307;&#x5357;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5355;&#x4E0B;&#x5212;&#x7EBF;&#x7684; &#x201C;<em>&#x201D; &#x800C;&#x4E0D;&#x662F;&#x8FD9;&#x91CC;&#x63A8;&#x8350;&#x7684;&#x53CC;&#x4E0B;&#x5212;&#x7EBF; &#x201C;__&#x201D; &#x6765; &#x6307;&#x793A;&#x5E9F;&#x5F03;&#x53D8;&#x91CF;&#x3002;&#x95EE;&#x9898;&#x662F;&#xFF0C; &#x201C;</em>&#x201D; &#x5E38;&#x7528;&#x5728;&#x4F5C;&#x4E3A; <code>gettext()</code> &#x51FD;&#x6570; &#x7684;&#x522B;&#x540D;&#xFF0C;&#x4E5F;&#x88AB;&#x7528;&#x5728;&#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8BB0;&#x5F55;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x4F7F;&#x7528;&#x53CC;&#x4E0B;&#x5212;&#x7EBF; &#x5341;&#x5206;&#x6E05;&#x6670;&#x548C;&#x65B9;&#x4FBF;&#xFF0C;&#x800C;&#x4E14;&#x80FD;&#x591F;&#x6D88;&#x9664;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x8FD9;&#x4E9B;&#x7528;&#x4F8B;&#x6240;&#x5E26;&#x6765;&#x7684;&#x610F;&#x5916;&#x5E72;&#x6270;&#x7684;&#x98CE;&#x9669;&#x3002;</p>
+<h2 id="create-a-length-n-list-of-the-same-thing&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x542B;n&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5217;&#x8868;">Create a length-N list of the same thing(&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x542B;N&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5217;&#x8868;)</h2>
+<p><em>Use the Python list </em> operator:*</p>
+<p>&#x4F7F;&#x7528;Python&#x5217;&#x8868;&#x4E2D;&#x7684; * &#x64CD;&#x4F5C;&#x7B26;&#xFF1A;</p>
+<pre><code>four_nones = [None] * 4
+</code></pre><h2 id="create-a-length-n-list-of-lists&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x542B;n&#x4E2A;&#x5217;&#x8868;&#x7684;&#x5217;&#x8868;">Create a length-N list of lists(&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x542B;N&#x4E2A;&#x5217;&#x8868;&#x7684;&#x5217;&#x8868;)</h2>
+<p><em>Because lists are mutable, the </em> operator (as above) will create a list of N references to the same list, which is not likely what you want. Instead, use a list comprehension:*</p>
+<p>&#x56E0;&#x4E3A;&#x5217;&#x8868;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x6240;&#x4EE5; * &#x64CD;&#x4F5C;&#x7B26;&#xFF08;&#x5982;&#x4E0A;&#xFF09;&#x5C06;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;N&#x4E2A;&#x4E14;&#x6307;&#x5411; &#x540C;&#x4E00;&#x4E2A; &#x5217;&#x8868;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x60A8;&#x60F3;&#x7528;&#x7684;&#x3002;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5217;&#x8868;&#x89E3;&#x6790;&#xFF1A;</p>
+<pre><code>four_lists = [[] for __ in xrange(4)]
+</code></pre><p><em>Note: Use range() instead of xrange() in Python 3</em></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728; Python 3 &#x4E2D;&#x4F7F;&#x7528; range() &#x800C;&#x4E0D;&#x662F; xrange()</p>
+<h2 id="create-a-string-from-a-list&#x6839;&#x636E;&#x5217;&#x8868;&#x6765;&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;">Create a string from a list(&#x6839;&#x636E;&#x5217;&#x8868;&#x6765;&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;)</h2>
+<p><em>A common idiom for creating strings is to use <code>str.join()</code> on an empty string.</em></p>
+<p>&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x4E60;&#x8BED;&#x662F;&#x5728;&#x7A7A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E0A;&#x4F7F;&#x7528; <code>str.join()</code> &#x3002;</p>
+<pre><code>letters = [&apos;s&apos;, &apos;p&apos;, &apos;a&apos;, &apos;m&apos;]
+word = &apos;&apos;.join(letters)
+</code></pre><p><em>This will set the value of the <code>variable word</code> to &#x2018;spam&#x2019;. This idiom can be applied to lists and tuples.</em></p>
+<p>&#x8FD9;&#x4F1A;&#x5C06; <code>word &#x53D8;&#x91CF;</code>&#x8D4B;&#x503C;&#x4E3A; &#x2018;spam&#x2019;&#x3002;&#x8FD9;&#x4E2A;&#x4E60;&#x8BED;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x5217;&#x8868;&#x548C;&#x5143;&#x7EC4;&#x4E2D;&#x3002;</p>
+<h2 id="searching-for-an-item-in-a-collection&#x5728;&#x96C6;&#x5408;&#x4F53;&#x4E2D;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x9879;">Searching for an item in a collection(&#x5728;&#x96C6;&#x5408;&#x4F53;&#x4E2D;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x9879;)</h2>
+<p><em>Sometimes we need to search through a collection of things. Let&#x2019;s look at two options: lists and sets.</em></p>
+<p>&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x96C6;&#x5408;&#x4F53;&#x4E2D;&#x67E5;&#x627E;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x8FD9;&#x4E24;&#x4E2A;&#x9009;&#x62E9;&#xFF1A;&#x5217;&#x8868;&#x548C;&#x96C6;&#x5408;&#xFF08;set&#xFF09;&#x3002;</p>
+<p><em>Take the following code for example:</em></p>
+<p>&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>s = set([&apos;s&apos;, &apos;p&apos;, &apos;a&apos;, &apos;m&apos;])
+l = [&apos;s&apos;, &apos;p&apos;, &apos;a&apos;, &apos;m&apos;]
+
+def lookup_set(s):
+    return &apos;s&apos; in s
+
+def lookup_list(l):
+    return &apos;s&apos; in l
+</code></pre><p><em>Even though both functions look identical, because lookup_set is utilizing the fact that sets in Python are hashtables, the lookup performance between the two is very different. To determine whether an item is in a list, Python will have to go through each item until it finds a matching item. This is time consuming, especially for long lists. In a set, on the other hand, the hash of the item will tell Python where in the set to look for a matching item. As a result, the search can be done quickly, even if the set is large. Searching in dictionaries works the same way. For more information see this <a href="http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table" target="_blank">StackOverflow</a> page. For detailed information on the amount of time various common operations take on each of these data structures, see <a href="https://wiki.python.org/moin/TimeComplexity?" target="_blank">this page</a>.</em></p>
+<p>&#x5373;&#x4F7F;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x770B;&#x8D77;&#x6765;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;&#x67E5;&#x627E;&#x96C6;&#x5408;&#x662F;&#x5229;&#x7528;&#x4E86;Python&#x4E2D;&#x7684;&#x96C6;&#x5408;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4E24;&#x8005;&#x7684;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x540C;&#x7684;&#x3002;&#x4E3A;&#x4E86;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x9879;&#x662F;&#x5426;&#x5728;&#x5217;&#x8868;&#x4E2D;&#xFF0C;Python&#x5C06;&#x4F1A;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x9879;&#x76F4;&#x5230;&#x5B83;&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;&#x9879;&#x3002;&#x8FD9;&#x662F;&#x8017;&#x65F6;&#x7684;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5BF9;&#x957F;&#x5217;&#x8868;&#x800C;&#x8A00;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x9879;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x5C06;&#x4F1A;&#x544A;&#x8BC9;Python&#x5728;&#x96C6;&#x5408;&#x7684;&#x54EA;&#x91CC;&#x53BB;&#x67E5;&#x627E;&#x5339;&#x914D;&#x7684;&#x9879;&#x3002;&#x7ED3;&#x679C;&#x662F;&#xFF0C;&#x5373;&#x4F7F;&#x96C6;&#x5408;&#x5F88;&#x5927;&#xFF0C;&#x67E5;&#x8BE2;&#x7684;&#x901F;&#x5EA6;&#x4E5F;&#x5F88;&#x5FEB;&#x3002;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#x67E5;&#x8BE2;&#x4E5F;&#x662F;&#x540C;&#x6837;&#x7684;&#x539F;&#x7406;&#x3002;&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x89C1;<a href="http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table" target="_blank">StackOverflow</a>&#x3002;&#x60F3;&#x4E86;&#x89E3;&#x5728;&#x6BCF;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#x7684;&#x591A;&#x79CD;&#x5E38;&#x89C1;&#x64CD;&#x4F5C;&#x7684;&#x82B1;&#x8D39;&#x65F6;&#x95F4;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x89C1;<a href="(https:/wiki.python.org/moin/TimeComplexity">&#x6B64;&#x9875;&#x9762;</a>)&#x3002;</p>
+<p><em>Because of these differences in performance, it is often a good idea to use sets or dictionaries instead of lists in cases where:</em></p>
+<p>&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x6027;&#x80FD;&#x4E0A;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x5728;&#x4E0B;&#x5217;&#x573A;&#x5408;&#x5728;&#x4F7F;&#x7528;&#x96C6;&#x5408;&#x6216;&#x8005;&#x5B57;&#x5178;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x662F;&#x4E2A;&#x597D;&#x4E3B;&#x610F;&#xFF1A;</p>
+<ul>
+<li>The collection will contain a large number of items 
+&#x96C6;&#x5408;&#x4F53;&#x4E2D;&#x5305;&#x542B;&#x5927;&#x91CF;&#x7684;&#x9879;</li>
+<li>You will be repeatedly searching for items in the collection
+&#x60A8;&#x5C06;&#x5728;&#x96C6;&#x5408;&#x4F53;&#x4E2D;&#x91CD;&#x590D;&#x5730;&#x67E5;&#x627E;&#x9879;</li>
+<li>You do not have duplicate items.
+&#x60A8;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#x7684;&#x9879;</li>
+</ul>
+<p><em>For small collections, or collections which you will not frequently be searching through, the additional time and memory required to set up the hashtable will often be greater than the time saved by the improved search speed.</em></p>
+<p>&#x5BF9;&#x4E8E;&#x5C0F;&#x7684;&#x96C6;&#x5408;&#x4F53;&#xFF0C;&#x6216;&#x8005;&#x60A8;&#x4E0D;&#x4F1A;&#x9891;&#x7E41;&#x67E5;&#x627E;&#x7684;&#x96C6;&#x5408;&#x4F53;&#xFF0C;&#x5EFA;&#x7ACB;&#x54C8;&#x5E0C;&#x5E26;&#x6765;&#x7684;&#x989D;&#x5916;&#x65F6;&#x95F4;&#x548C;&#x5185;&#x5B58;&#x7684; &#x5F00;&#x9500;&#x7ECF;&#x5E38;&#x4F1A;&#x5927;&#x8FC7;&#x6539;&#x8FDB;&#x641C;&#x7D22;&#x901F;&#x5EA6;&#x6240;&#x8282;&#x7701;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<h1 id="zen-of-pythonpython&#x4E4B;&#x7985;">Zen of Python(Python&#x4E4B;&#x7985;)</h1>
+<p><em>Also known as <a href="https://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20</a>, the guiding principles for Python&#x2019;s design.</em></p>
+<p>&#x53C8;&#x540D; <a href="https://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20</a>, Python&#x8BBE;&#x8BA1;&#x7684;&#x6307;&#x5BFC;&#x539F;&#x5219;&#x3002;</p>
+<pre><code>&gt;&gt;&gt; import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+
+Python&#x4E4B;&#x7985; by Tim Peters
+
+&#x4F18;&#x7F8E;&#x80DC;&#x4E8E;&#x4E11;&#x964B;&#xFF08;Python&#x4EE5;&#x7F16;&#x5199;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x4E3A;&#x76EE;&#x6807;&#xFF09;
+&#x660E;&#x4E86;&#x80DC;&#x4E8E;&#x6666;&#x6DA9;&#xFF08;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x5F53;&#x662F;&#x660E;&#x4E86;&#x7684;&#xFF0C;&#x547D;&#x540D;&#x89C4;&#x8303;&#xFF0C;&#x98CE;&#x683C;&#x76F8;&#x4F3C;&#xFF09;
+&#x7B80;&#x6D01;&#x80DC;&#x4E8E;&#x590D;&#x6742;&#xFF08;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x5F53;&#x662F;&#x7B80;&#x6D01;&#x7684;&#xFF0C;&#x4E0D;&#x8981;&#x6709;&#x590D;&#x6742;&#x7684;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#xFF09;
+&#x590D;&#x6742;&#x80DC;&#x4E8E;&#x51CC;&#x4E71;&#xFF08;&#x5982;&#x679C;&#x590D;&#x6742;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#xFF0C;&#x90A3;&#x4EE3;&#x7801;&#x95F4;&#x4E5F;&#x4E0D;&#x80FD;&#x6709;&#x96BE;&#x61C2;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x8981;&#x4FDD;&#x6301;&#x63A5;&#x53E3;&#x7B80;&#x6D01;&#xFF09;
+&#x6241;&#x5E73;&#x80DC;&#x4E8E;&#x5D4C;&#x5957;&#xFF08;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x5F53;&#x662F;&#x6241;&#x5E73;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x6709;&#x592A;&#x591A;&#x7684;&#x5D4C;&#x5957;&#xFF09;
+&#x95F4;&#x9694;&#x80DC;&#x4E8E;&#x7D27;&#x51D1;&#xFF08;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x6709;&#x9002;&#x5F53;&#x7684;&#x95F4;&#x9694;&#xFF0C;&#x4E0D;&#x8981;&#x5962;&#x671B;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF09;
+&#x53EF;&#x8BFB;&#x6027;&#x5F88;&#x91CD;&#x8981;&#xFF08;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x53EF;&#x8BFB;&#x7684;&#xFF09;
+&#x5373;&#x4FBF;&#x5047;&#x501F;&#x7279;&#x4F8B;&#x7684;&#x5B9E;&#x7528;&#x6027;&#x4E4B;&#x540D;&#xFF0C;&#x4E5F;&#x4E0D;&#x53EF;&#x8FDD;&#x80CC;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#xFF08;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x81F3;&#x9AD8;&#x65E0;&#x4E0A;&#xFF09;
+&#x4E0D;&#x8981;&#x5305;&#x5BB9;&#x6240;&#x6709;&#x9519;&#x8BEF;&#xFF0C;&#x9664;&#x975E;&#x60A8;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x505A;&#xFF08;&#x7CBE;&#x51C6;&#x5730;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF0C;&#x4E0D;&#x5199; except:pass &#x98CE;&#x683C;&#x7684;&#x4EE3;&#x7801;&#xFF09;
+&#x5F53;&#x5B58;&#x5728;&#x591A;&#x79CD;&#x53EF;&#x80FD;&#xFF0C;&#x4E0D;&#x8981;&#x5C1D;&#x8BD5;&#x53BB;&#x731C;&#x6D4B;
+&#x800C;&#x662F;&#x5C3D;&#x91CF;&#x627E;&#x4E00;&#x79CD;&#xFF0C;&#x6700;&#x597D;&#x662F;&#x552F;&#x4E00;&#x4E00;&#x79CD;&#x660E;&#x663E;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x5C31;&#x7528;&#x7A77;&#x4E3E;&#x6CD5;&#xFF09;
+&#x867D;&#x7136;&#x8FD9;&#x5E76;&#x4E0D;&#x5BB9;&#x6613;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x4E0D;&#x662F; Python &#x4E4B;&#x7236;&#xFF08;&#x8FD9;&#x91CC;&#x7684; Dutch &#x662F;&#x6307; Guido &#xFF09;
+&#x505A;&#x4E5F;&#x8BB8;&#x597D;&#x8FC7;&#x4E0D;&#x505A;&#xFF0C;&#x4F46;&#x4E0D;&#x5047;&#x601D;&#x7D22;&#x5C31;&#x52A8;&#x624B;&#x8FD8;&#x4E0D;&#x5982;&#x4E0D;&#x505A;&#xFF08;&#x52A8;&#x624B;&#x4E4B;&#x524D;&#x8981;&#x7EC6;&#x601D;&#x91CF;&#xFF09;
+&#x5982;&#x679C;&#x60A8;&#x65E0;&#x6CD5;&#x5411;&#x4EBA;&#x63CF;&#x8FF0;&#x60A8;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x90A3;&#x80AF;&#x5B9A;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x65B9;&#x6848;&#xFF1B;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#xFF08;&#x65B9;&#x6848;&#x6D4B;&#x8BC4;&#x6807;&#x51C6;&#xFF09;
+&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x662F;&#x4E00;&#x79CD;&#x7EDD;&#x5999;&#x7684;&#x7406;&#x5FF5;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x5F53;&#x591A;&#x52A0;&#x5229;&#x7528;&#xFF08;&#x5021;&#x5BFC;&#x4E0E;&#x53F7;&#x53EC;&#xFF09;
+</code></pre><p><em>For some examples of good Python style, see <a href="http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf" target="_blank">these slides from a Python user group</a>.</em></p>
+<p>&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E9B;Python&#x4F18;&#x96C5;&#x98CE;&#x683C;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8BF7;&#x89C1; <a href="http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf" target="_blank">&#x8FD9;&#x4E9B;&#x6765;&#x81EA;&#x4E8E;Python&#x7528;&#x6237;&#x7684;&#x5E7B;&#x706F;&#x7247;</a>.</p>
+<h1 id="pep-8">PEP 8</h1>
+<p><em><a href="https://www.python.org/dev/peps/pep-0008" target="_blank">PEP 8</a> is the de-facto code style guide for Python. A high quality, easy-to-read version of PEP 8 is also available at <a href="http://pep8.org/" target="_blank">pep8.org</a>.</em></p>
+<p><a href="https://www.python.org/dev/peps/pep-0008" target="_blank">PEP 8</a> &#x662F;Python&#x4E8B;&#x5B9E;&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x6307;&#x5357;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;  <a href="http://pep8.org/" target="_blank">pep8.org</a> &#x4E0A;&#x83B7;&#x5F97;&#x9AD8;&#x8D28;&#x91CF;&#x7684;&#x3001;&#x4E00;&#x5EA6;&#x7684;PEP 8&#x7248;&#x672C;&#x3002;</p>
+<p><em>This is highly recommended reading. The entire Python community does their best to adhere to the guidelines laid out within this document. Some project may sway from it from time to time, while others may <a href="http://docs.python-requests.org/en/master/dev/contributing/#kenneth-reitz-s-code-style" target="_blank">amend its recommendations</a>.</em></p>
+<p>&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x9605;&#x8BFB;<a href="http://docs.python-requests.org/en/master/dev/contributing/#kenneth-reitz-s-code-style" target="_blank">&#x8FD9;&#x90E8;&#x5206;</a>&#x3002;&#x6574;&#x4E2A;Python&#x793E;&#x533A;&#x90FD;&#x5C3D;&#x529B;&#x9075;&#x5FAA;&#x672C;&#x6587;&#x6863;&#x4E2D;&#x89C4;&#x5B9A;&#x7684;&#x51C6;&#x5219;&#x3002;&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x53D7;&#x5176;&#x5F71;&#x54CD;&#xFF0C; &#x800C;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x4FEE;&#x6539;&#x5176;&#x5EFA;&#x8BAE;&#x3002;</p>
+<p><em>That being said, conforming your Python code to PEP 8 is generally a good idea and helps make code more consistent when working on projects with other developers. There is a command-line program, <a href="https://github.com/PyCQA/pycodestyle" target="_blank">pycodestyle</a> (previously known as pep8), that can check your code for conformance. Install it by running the following command in your terminal:</em></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BA9;&#x60A8;&#x7684; Python &#x4EE3;&#x7801;&#x9075;&#x5FAA; PEP8 &#x901A;&#x5E38;&#x662F;&#x4E2A;&#x597D;&#x4E3B;&#x610F;&#xFF0C;&#x8FD9;&#x4E5F;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x4E0E;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E00;&#x8D77;&#x5DE5;&#x4F5C;&#x65F6;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x5177;&#x6709;&#x53EF;&#x6301;&#x7EED;&#x6027;&#x3002;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F; pycodestyle <a href="https://github.com/PyCQA/pycodestyle" target="_blank">https://github.com/PyCQA/pycodestyle</a> &#xFF08;&#x4EE5;&#x524D;&#x53EB;&#x505A;<code>pep8</code>&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x4EE3;&#x7801;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x5728;&#x60A8;&#x7684;&#x7EC8;&#x7AEF;&#x4E0A;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;&#x5B83;&#xFF1A;</p>
+<pre><code>$ pip install pycodestyle
+</code></pre><p><em>Then run it on a file or series of files to get a report of any violations.</em></p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x5B83;&#xFF0C;&#x6765;&#x83B7;&#x5F97;&#x4EFB;&#x4F55;&#x8FDD;&#x89C4;&#x884C;&#x4E3A;&#x7684;&#x62A5;&#x544A;&#x3002;</p>
+<pre><code>$ pycodestyle optparse.py
+optparse.py:69:11: E401 multiple imports on one line
+optparse.py:77:1: E302 expected 2 blank lines, found 1
+optparse.py:88:5: E301 expected 1 blank line, found 0
+optparse.py:222:34: W602 deprecated form of raising exception
+optparse.py:347:31: E211 whitespace before &apos;(&apos;
+optparse.py:357:17: E201 whitespace after &apos;{&apos;
+optparse.py:472:29: E221 multiple spaces before operator
+optparse.py:544:21: W601 .has_key() is deprecated, use &apos;in&apos;
+</code></pre><p><em>The program <a href="https://pypi.python.org/pypi/autopep8/" target="_blank">autopep8</a> can be used to automatically reformat code in the PEP 8 style. Install the program with:</em></p>
+<p>&#x7A0B;&#x5E8F; autopep8 &#x80FD;&#x81EA;&#x52A8;&#x5C06;&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316; &#x6210; PEP 8 &#x98CE;&#x683C;&#x3002;&#x7528;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#x5B89;&#x88C5;&#x6B64;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code>$ pip install autopep8
+</code></pre><p><em>Use it to format a file in-place with:</em></p>
+<p>&#x7528;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>$ autopep8 --in-place optparse.py
+</code></pre><p><em>Excluding the --in-place flag will cause the program to output the modified code directly to the console for review.
+The --aggressive flag will perform more substantial changes and can be applied multiple times for greater effect.</em></p>
+<p>&#x4E0D;&#x5305;&#x542B; --in-place &#x6807;&#x5FD7;&#x5C06;&#x4F1A;&#x4F7F;&#x5F97;&#x7A0B;&#x5E8F;&#x76F4;&#x63A5;&#x5C06;&#x66F4;&#x6539;&#x7684;&#x4EE3;&#x7801;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x4EE5;&#x4F9B;&#x5BA1;&#x67E5;&#x3002; --aggressive &#x6807;&#x5FD7;&#x5219;&#x4F1A;&#x6267;&#x884C;&#x66F4;&#x591A;&#x5B9E;&#x8D28;&#x6027;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#x4EE5;&#x8FBE;&#x5230;&#x66F4;&#x4F73;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<h1 id="conventions&#x7EA6;&#x5B9A;">Conventions(&#x7EA6;&#x5B9A;)</h1>
+<p><em>Here are some conventions you should follow to make your code easier to read.</em></p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x60A8;&#x5E94;&#x8BE5;&#x9075;&#x5FAA;&#x7684;&#x7EA6;&#x5B9A;&#xFF0C;&#x4EE5;&#x8BA9;&#x60A8;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x6613;&#x8BFB;&#x3002;</p>
+<h2 id="check-if-variable-equals-a-constant&#x68C0;&#x67E5;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x5E38;&#x91CF;">Check if variable equals a constant(&#x68C0;&#x67E5;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x5E38;&#x91CF;)</h2>
+<p><em>You don&#x2019;t need to explicitly compare a value to True, or None, or 0 - you can just add it to the if statement. See <a href="http://docs.python.org/library/stdtypes.html#truth-value-testing" target="_blank">Truth
+Value Testing</a> for a list of what is considered false</em></p>
+<p>&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x660E;&#x786E;&#x5730;&#x6BD4;&#x8F83;&#x4E00;&#x4E2A;&#x503C;&#x662F;True&#xFF0C;&#x6216;&#x8005;None&#xFF0C;&#x6216;&#x8005;0-&#x60A8;&#x53EF;&#x4EE5;&#x4EC5;&#x4EC5;&#x628A;&#x5B83;&#x653E;&#x5728;if&#x8BED;&#x53E5;&#x4E2D;&#x3002;&#x53C2;&#x9605;<a href="http://docs.python.org/library/stdtypes.html#truth-value-testing" target="_blank">&#x771F;&#x503C;&#x6D4B;&#x8BD5;</a> &#x6765;&#x4E86;&#x89E3;&#x4EC0;&#x4E48;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;false&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code>if attr == True:
+    print &apos;True!&apos;
+if attr == None:
+    print &apos;attr is None!&apos;
+</code></pre><p><strong>Good</strong></p>
+<pre><code># Just check the value
+if attr:
+    print &apos;attr is truthy!&apos;
+# or check for the opposite
+if not attr:
+    print &apos;attr is falsey!&apos;
+# or, since None is considered false, explicitly check for it
+if attr is None:
+    print &apos;attr is None!&apos;
+</code></pre><h2 id="access-a-dictionary-element&#x8BBF;&#x95EE;&#x5B57;&#x5178;&#x5143;&#x7D20;">Access a Dictionary Element(&#x8BBF;&#x95EE;&#x5B57;&#x5178;&#x5143;&#x7D20;)</h2>
+<p><em>Don&#x2019;t use the <a href="http://docs.python.org/library/stdtypes.html#dict.has_key" target="_blank">dict.has_key()</a> method. Instead, use <code>x in d</code> syntax, or pass a default argument to <a href="http://docs.python.org/library/stdtypes.html#dict.get" target="_blank">dict.get()</a>.</em></p>
+<p>&#x4E0D;&#x8981;&#x4F7F;&#x7528; <a href="http://docs.python.org/library/stdtypes.html#dict.has_key" target="_blank">dict.has_key()</a>&#x65B9;&#x6CD5;&#x3002;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#xFF0C;&#x4F7F;&#x7528; x in d &#x8BED;&#x6CD5;&#xFF0C;&#x6216;&#x8005; &#x5C06;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; <a href="http://docs.python.org/library/stdtypes.html#dict.get" target="_blank">dict.get()</a>&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code>d = {&apos;hello&apos;: &apos;world&apos;}
+if d.has_key(&apos;hello&apos;):
+    print d[&apos;hello&apos;] # prints &apos;world&apos;
+else:
+    print &apos;default_value&apos;
+</code></pre><p><strong>Good</strong></p>
+<pre><code>d = {&apos;hello&apos;: &apos;world&apos;}
+
+print d.get(&apos;hello&apos;, &apos;default_value&apos;) # prints &apos;world&apos;
+print d.get(&apos;thingy&apos;, &apos;default_value&apos;) # prints &apos;default_value&apos;
+
+# Or:
+if &apos;hello&apos; in d:
+    print d[&apos;hello&apos;]
+</code></pre><h2 id="short-ways-to-manipulate-lists&#x7EF4;&#x62A4;&#x5217;&#x8868;&#x7684;&#x6377;&#x5F84;">Short Ways to Manipulate Lists(&#x7EF4;&#x62A4;&#x5217;&#x8868;&#x7684;&#x6377;&#x5F84;)</h2>
+<p><em><a href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions" target="_blank">List comprehensions</a> provide a powerful, concise way to work with lists. Also, the <a href="http://docs.python.org/library/functions.html#map" target="_blank">map()</a> and <a href="http://docs.python.org/library/functions.html#filter" target="_blank">filter()</a> functions
+can perform operations on lists using a different, more concise syntax.</em></p>
+<p><a href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions" target="_blank">&#x5217;&#x8868;&#x63A8;&#x5BFC;</a> &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x800C;&#x53C8;&#x7B80;&#x6D01;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5904;&#x7406;&#x5217;&#x8868;&#x3002;&#x800C;&#x4E14;&#xFF0C; <a href="http://docs.python.org/library/functions.html#map" target="_blank">map()</a> &#x548C; <a href="http://docs.python.org/library/functions.html#filter" target="_blank">filter()</a> &#x51FD;&#x6570;&#x7528;&#x7528;&#x4E00;&#x79CD;&#x4E0D;&#x540C;&#x4E14;&#x66F4;&#x7B80;&#x6D01;&#x7684;&#x8BED;&#x6CD5;&#x5904;&#x7406;&#x5217;&#x8868;&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code># Filter elements greater than 4
+a = [3, 4, 5]
+b = []
+for i in a:
+if i &gt; 4:
+    b.append(i)
+</code></pre><p><strong>Good</strong></p>
+<pre><code>a = [3, 4, 5]
+b = [i for i in a if i &gt; 4]
+# Or:
+b = filter(lambda x: x &gt; 4, a)
+</code></pre><p><strong>Bad</strong></p>
+<pre><code># Add three to all list members.
+a = [3, 4, 5]
+for i in range(len(a)):
+a[i] += 3
+</code></pre><p><strong>Good</strong></p>
+<pre><code>a = [3, 4, 5]
+a = [i + 3 for i in a]
+# Or:
+a = map(lambda i: i + 3, a)
+</code></pre><p><em>Use <a href="http://docs.python.org/library/functions.html#enumerate" target="_blank">enumerate()</a> keep a count of your place in the list.</em></p>
+<p>&#x4F7F;&#x7528; <a href="http://docs.python.org/library/functions.html#enumerate" target="_blank">enumerate()</a> &#x51FD;&#x6570;&#x6BD4;&#x624B;&#x52A8;&#x7EF4;&#x62A4;&#x8BA1;&#x6570;&#x6709;&#x66F4;&#x597D;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x5B83;&#x5BF9;&#x8FED;&#x4EE3;&#x5668; &#x8FDB;&#x884C;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x4F18;&#x5316;&#x3002;</p>
+<h2 id="read-from-a-file&#x8BFB;&#x53D6;&#x6587;&#x4EF6;">Read From a File(&#x8BFB;&#x53D6;&#x6587;&#x4EF6;)</h2>
+<p><em>Use the <code>with open</code> syntax to read from files. This will automatically close files for you.</em></p>
+<p>&#x4F7F;&#x7528; <code>with open</code> &#x8BED;&#x6CD5;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x3002;&#x5B83;&#x5C06;&#x4F1A;&#x4E3A;&#x60A8;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>Bad</strong></p>
+<pre><code>f = open(&apos;file.txt&apos;)
+a = f.read()
+print a
+f.close()
+</code></pre><p><strong>Good</strong></p>
+<pre><code>with open(&apos;file.txt&apos;) as f:
+    for line in f:
+        print line
+</code></pre><p><em>The <code>with</code> statement is better because it will ensure you always close the file, even if an exception is raised inside the
+<code>with</code> block.</em></p>
+<p><code>with</code> &#x8BED;&#x53E5;&#x4F1A;&#x66F4;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x80FD;&#x786E;&#x4FDD;&#x60A8;&#x603B;&#x662F;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x5728; <code>with</code> &#x7684;&#x533A;&#x5757;&#x4E2D; &#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;</p>
+<h2 id="line-continuations&#x884C;&#x7684;&#x5EF6;&#x7EED;">Line Continuations(&#x884C;&#x7684;&#x5EF6;&#x7EED;)</h2>
+<p><em>When a logical line of code is longer than the accepted limit, you need to split it over multiple physical lines. The Python interpreter will join consecutive lines if the last character of the line is a backslash. This is helpful in some cases, but should usually be avoided because of its fragility: a white space added to the end of the line, after the backslash, will break the code and may have unexpected results.</em></p>
+<p>&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x884C;&#x7684;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x9650;&#x5EA6;&#x65F6;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x5C06;&#x4E4B;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x7269;&#x7406;&#x884C;&#x3002;&#x5982;&#x679C;&#x884C;&#x7684;&#x7ED3;&#x5C3E; &#x662F;&#x4E00;&#x4E2A;&#x53CD;&#x659C;&#x6760;&#xFF08;&#xFF09;&#xFF0C;Python&#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x628A;&#x8FD9;&#x4E9B;&#x8FDE;&#x7EED;&#x884C;&#x62FC;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x8FD9;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x603B;&#x662F;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x8106;&#x5F31;&#x6027;&#xFF1A;&#x5982;&#x679C;&#x5728;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#xFF0C;&#x5728;&#x53CD;&#x659C;&#x6760;&#x540E;&#x52A0;&#x4E86;&#x7A7A;&#x683C;&#xFF0C;&#x8FD9;&#x4F1A;&#x7834;&#x574F;&#x4EE3;&#x7801;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x80FD;&#x6709;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p><em>A better solution is to use parentheses around your elements. Left with an unclosed parenthesis on an end-of-line the Python interpreter will join the next line until the parentheses are closed. The same behavior holds for curly and square braces.</em></p>
+<p>&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x5728;&#x5143;&#x7D20;&#x5468;&#x56F4;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x3002;&#x5DE6;&#x8FB9;&#x4EE5;&#x4E00;&#x4E2A;&#x672A;&#x95ED;&#x5408;&#x7684;&#x62EC;&#x53F7;&#x5F00;&#x5934;&#xFF0C;Python &#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x628A;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#x548C;&#x4E0B;&#x4E00;&#x884C;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x76F4;&#x5230;&#x9047;&#x5230;&#x95ED;&#x5408;&#x7684;&#x62EC;&#x53F7;&#x3002;&#x540C;&#x6837;&#x7684;&#x884C;&#x4E3A;&#x9002;&#x7528;&#x4E2D;&#x62EC;&#x53F7; &#x548C;&#x5927;&#x62EC;&#x53F7;&#x3002;</p>
+<pre><code>my_very_big_string = &quot;&quot;&quot;For a long time I used to go to bed early.      Sometimes, when I had put out my candle, my eyes would close so     quickly that I had not even time to say &#x201C;I&#x2019;m going to sleep.&#x201D;&quot;&quot;&quot;
+
+from some.deep.module.inside.a.module import a_nice_function,           another_nice_function, yet_another_nice_function
+</code></pre><p><strong>GOOD</strong></p>
+<pre><code>my_very_big_string = (
+    &quot;For a long time I used to go to bed early. Sometimes, &quot;
+    &quot;when I had put out my candle, my eyes would close so quickly &quot;
+    &quot;that I had not even time to say &#x201C;I&#x2019;m going to sleep.&#x201D;&quot;
+)
+from some.deep.module.inside.a.module import (a_nice_function,          another_nice_function, yet_another_nice_function)
+</code></pre><p><em>However, more often than not, having to split a long logical line is a sign that you are trying to do too many things at
+the same time, which may hinder readability.</em></p>
+<p>&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5FC5;&#x987B;&#x53BB;&#x5206;&#x5272;&#x4E00;&#x4E2A;&#x957F;&#x903B;&#x8F91;&#x884C;&#x610F;&#x5473;&#x7740;&#x60A8;&#x540C;&#x65F6;&#x60F3;&#x505A;&#x592A;&#x591A;&#x7684;&#x4E8B;&#xFF0C;&#x8FD9; &#x53EF;&#x80FD;&#x5F71;&#x54CD;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.1.Structuring Your Project--结构化您的工程.html" class="navigation navigation-prev " aria-label="Previous page: 3.1.结构化您的工程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.3.Reading Great Code--阅读好的代码.html" class="navigation navigation-next " aria-label="Next page: 3.3.阅读好的代码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2.代码风格","level":"1.4.2","depth":2,"next":{"title":"3.3.阅读好的代码","level":"1.4.3","depth":2,"path":"3.写出优雅的Python代码/3.3.Reading Great Code--阅读好的代码.md","ref":"3.写出优雅的Python代码/3.3.Reading Great Code--阅读好的代码.md","articles":[]},"previous":{"title":"3.1.结构化您的工程","level":"1.4.1","depth":2,"path":"3.写出优雅的Python代码/3.1.Structuring Your Project--结构化您的工程.md","ref":"3.写出优雅的Python代码/3.1.Structuring Your Project--结构化您的工程.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3.写出优雅的Python代码/3.2.Code Style--代码风格.md","mtime":"2018-02-16T09:51:34.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T09:08:28.834Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
